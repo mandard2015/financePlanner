@@ -1,6 +1,7 @@
 const cors = require("cors");
 const express = require("express");
 const { MongoClient } = require("mongodb");
+const path = require('path');
 // const mongoose = require('mongoose');
 require("dotenv").config({ path: "./config.env" });
 
@@ -8,7 +9,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 app.get('/', (req, res) => res.send('Hello world'));
-app.use('/images', express.static('images'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 app.use(express.json());
 
@@ -51,6 +52,16 @@ const startServer = async () => {
       try {
         const reviews = await db.collection("reviews").find().toArray();
         res.json(reviews);
+      } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: error.message });
+      }
+    });
+
+    app.get('/logos', async (req, res) => {
+      try {
+        const logos = await db.collection("logos").find().toArray();
+        res.json(logos);
       } catch (error) {
         console.error(error);
         res.status(500).json({ error: error.message });
