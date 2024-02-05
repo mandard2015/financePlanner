@@ -6,25 +6,24 @@ const Footer = () => {
     return (
         <footer className="bg-light text-dark py-4">
             <div className="container">
-                <div className="row">
+                <div className="row" style={{ justifyContent: 'space-between'}}>
                     <div className="col-md-4">
                         <h4>Contact Us</h4>
                         <p><FaPhone className="me-2" />
-                            Phone: +1234567890
+                            Phone: 9011094170
                         </p>
                         <p>
                             <FaEnvelope className="me-2" />
-                            Email: info@example.com
+                            Email: licanand1@gmail.com
                         </p>
                         <p>
                             <IoLocationOutline className="me-2" />
                             Address: Your Street, City, Country
                         </p>
                     </div>
-
                     <div className="col-md-4">
                         <h4>Follow us</h4>
-                        <div className="d-flex">
+                        <div>
                             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferer" className="text-dark me-3">
                                 <FaFacebook size={30} />
                             </a>

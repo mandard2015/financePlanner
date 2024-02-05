@@ -7,6 +7,7 @@ const Reviews = () => {
     const [rating, setRating] = useState(0);
     const [reviewText, setReviewText] = useState('');
     const [reviews, setReviews] = useState([]);
+    const [activeIndex, setActiveIndex] = useState(0);
 
     useEffect(() => {
         // Fetch reviews from server when the component mounts
@@ -14,6 +15,18 @@ const Reviews = () => {
             .then(response => setReviews(response.data))
             .catch(error => console.error(error));
     }, []);
+
+    const handlePrev = () => {
+        setActiveIndex((prevIndex) => (prevIndex === 0 ? reviews.length - 1 : prevIndex - 1));
+    };
+
+    const handleNext = () => {
+        setActiveIndex((prevIndex) => (prevIndex === reviews.length - 1 ? 0 : prevIndex + 1));
+    };
+
+    const handleIndicatorClick = (index) => {
+        setActiveIndex(index);
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -33,28 +46,36 @@ const Reviews = () => {
     };
 
     return (
-        <div className="container mt-4">
+        <div className="container mt-4" style={{ fontFamily: 'monospace'}}>
             <div className='row' style={{ height: '33%' }}>
                 <div className='col-md-9'>
                     <h3>Customer Reviews</h3>
                     {reviews.length > 0 ? (
-                        // <Carousel className='m-3' fade data-bs-theme="dark" style={{height: '75%'}}>
-                        
-                            reviews.map((review) => (
-                                // <Carousel.Item 
-                                <div> key={review._id}
-                                    <div className='d-flex flex-column justify-content-center align-items-center'>
+                        <div id="reviewCarousel" className='carousel slide bg-light' data-bs-ride="carousel" data-bs-interval='5000'>
+                            <div className="carousel-inner" style={{ textAlign: 'center'}}>
+                                {reviews.map((review, index) => (
+                                    <div key={index} className={`carousel-item${index === activeIndex ? ' active' : ''}`}>
                                         <h4>{review.name}</h4>
                                         <p>{review.reviewText}</p>
                                         <p>Rating: {Array.from({ length: review.rating }, (_, index) => <span key={index}>⭐</span>)}</p>
                                     </div>
-                                </div>
-                                // {/* </Carousel.Item> */ }
-                            ))
-                            // }
-                    // {/* </Carousel> */}
+                                ))}
+                            </div>
+                            <a className="carousel-control-prev" href="#reviewCarousel" role='button' data-bs-slide="prev" onClick={handlePrev}>
+                                <i className="carousel-control-prev-icon" aria-hidden="true"></i>
+                            </a>
+                            <a className="carousel-control-next" href="#reviewCarousel" role='button' data-bs-slide="next" onClick={handleNext}>
+                                <i className="carousel-control-next-icon" aria-hidden="true"></i>
+                            </a>
+                            <ol className="carousel-indicators" style={{ position: 'relative'}}>
+                                {reviews.map((_, index) => (
+                                    <li key={index} data-bs-target="#reviewCarousel" data-bs-slide-to={index} 
+                                    className={index === activeIndex ? 'active' : ''} onClick={() => handleIndicatorClick(index)}></li>
+                                ))}
+                            </ol>
+                        </div>
                     ) : (
-                    <p>No reviews yet.</p>
+                        <p>No reviews yet.</p>
                     )}
                 </div>
                 <div className='col-md-3 mt-4 mt-md-0'>
