@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
 import axios from 'axios';
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -7,29 +6,37 @@ const WorkExp = () => {
     const [logos, setLogos] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/logos')
+        axios.get('http://localhost:5000/api/logos')
             .then(response => setLogos(response.data))
             .catch(error => console.error(error));
     }, []);
+
+    const keyframes = `
+    @keyframes slide {
+        from {
+          transform: translateX(100%);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      }`;
 
     return (
         <section className='member_counter'>
             <div>
                 <h1>Associate Partners</h1>
-                <Carousel fade>
-                    {logos.map((logo, index) => (
-                        <Carousel.Item key={index}>
-                            <img
-                                className="d-block w-100"
-                                src={logo.imageUrl}
-                                alt={logo.name}
-                            />
-                            <Carousel.Caption>
-                                <h3>{logo.name}</h3>
-                            </Carousel.Caption>
-                        </Carousel.Item>
+                <style>{keyframes}</style>
+                <div style={{ height: '125px', overflow: 'hidden', whiteSpace: 'nowrap',
+                 display: 'flex'}}>
+                    {logos.map((logo) => (
+                        <img
+                        key={logo._id}
+                            style={{ height: '75%', width:'25%', marginRight: '20px', animation: 'slide 10s linear infinite' }}
+                            src={`http://localhost:3000${logo.imageUrl}`}
+                            alt={logo.name}
+                        />
                     ))}
-                </Carousel>
+                </div>
             </div>
             <div className='container' style={{ backgroundImage: '-webkit-linear-gradient(60deg, #5498fd 25%, #ff2ae7 75%)' }}>
                 <div className='row' style={{ fontFamily: 'cursive', color: 'cornsilk' }}>

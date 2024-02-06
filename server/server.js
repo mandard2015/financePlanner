@@ -58,9 +58,9 @@ const startServer = async () => {
       }
     });
 
-    app.get('/logos', async (req, res) => {
+    app.get('/api/logos', async (req, res) => {
       try {
-        const logos = await db.collection("logos").find().toArray();
+        const logos = await db.collection("logo").find().toArray();
         res.json(logos);
       } catch (error) {
         console.error(error);
