@@ -52,7 +52,7 @@ const Reviews = () => {
                 <div className='col-md-9'>
                     <h3>Customer Reviews</h3>
                     {reviews.length > 0 ? (
-                        <Carousel fade>
+                        <Carousel fade data-bs-theme="dark" style={{height: '75%'}}>
                             {reviews.map((review, index) => (
                                 <Carousel.Item key={index}>
                                     <div className='text-center'>

@@ -8,17 +8,20 @@ const Footer = () => {
             <div className="container">
                 <div className="row" style={{ justifyContent: 'space-between'}}>
                     <div className="col-md-4">
-                        <h4>Contact Us</h4>
-                        <p><FaPhone className="me-2" />
-                            Phone: 9011094170
+                        <h4 className="mx-3">Contact Info</h4>
+                        <h5>Anand Deshmukh</h5>
+                        <p className="mb-1"><FaPhone className="me-2" />
+                            9011094170
+                        <FaPhone className="mx-2" />
+                            8698405919
                         </p>
-                        <p>
+                        <p className="mb-1">
                             <FaEnvelope className="me-2" />
-                            Email: licanand1@gmail.com
+                             licanand1@gmail.com
                         </p>
-                        <p>
+                        <p className="mb-1">
                             <IoLocationOutline className="me-2" />
-                            Address: Your Street, City, Country
+                             Pimpri, Pune - 411017
                         </p>
                     </div>
                     <div className="col-md-4">
