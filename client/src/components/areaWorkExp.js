@@ -33,20 +33,7 @@ const WorkExp = () => {
     }
 
     return (
-        <section id="workExp" style={{ paddingTop: '80px'}}>
-            <div className='container bg-light'>
-                <div className='row m-3'>
-                    <div className='col p-3'>
-                        <img style={{ width: '150px' }} src='/images/Anand.jpg' />
-                        <h5>Mr. Anand Deshmukh</h5>
-                    </div>
-                    <div className='col p-3'>
-                        <h3>Hello...</h3>
-                        <p> With a comprehensive range of insurance products and services, we are committed
-                            to meeting the diverse needs of customers across the country.</p>
-                    </div>
-                </div>
-            </div>
+        <section id="workExp">
             <div className='container'>
                 <div className='row m-3 px-3' style={{ overflow: 'hidden', fontFamily: 'monospace', color: 'ButtonText' }}>
                     <h3>Associate Partners</h3>
@@ -83,7 +70,7 @@ const WorkExp = () => {
                     </div>
                 </div>
             </div>
-            <div className='container' style={{ backgroundImage: '-webkit-linear-gradient(60deg, #5498fd 25%, #ff2ae7 75%)' }}>
+            <div className='container m-3' style={{ backgroundImage: '-webkit-linear-gradient(60deg, #5498fd 25%, #ff2ae7 75%)' }}>
                 <div className='row p-3 text-center' style={{ justifyContent: 'center', fontFamily: 'cursive', color: 'cornsilk' }}>
                     <div className='col-lg-3 col-sm-6 p-3'>
                         <h3>17 +</h3>
