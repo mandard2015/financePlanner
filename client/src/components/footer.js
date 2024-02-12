@@ -1,15 +1,15 @@
 import React from "react";
-import { FaFacebook, FaInstagram, FaGoogle, FaWhatsapp, FaPhone, FaEnvelope } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp, FaPhone, FaEnvelope } from "react-icons/fa";
 import { IoLocationOutline } from 'react-icons/io5';
 
 const Footer = () => {
     return (
-        <footer className="bg-light text-dark py-4">
+        <footer id="contact" className="bg-light text-dark py-4">
             <div className="container">
-                <div className="row" style={{ justifyContent: 'space-between'}}>
-                    <div className="col-md-4">
+                <div className="row justify-content-around">
+                    <div className="col-md-4 justify-content-center">
                         <h4 className="mx-3">Contact Info</h4>
-                        <h5>Anand Deshmukh</h5>
+                        <h5>Mr. Anand Deshmukh</h5>
                         <p className="mb-1"><FaPhone className="me-2" />
                             9011094170
                         <FaPhone className="mx-2" />
@@ -25,7 +25,7 @@ const Footer = () => {
                         </p>
                     </div>
                     <div className="col-md-4">
-                        <h4>Follow us</h4>
+                        <h4 className="mt-2">Follow us</h4>
                         <div>
                             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferer" className="text-dark me-3">
                                 <FaFacebook size={30} />
@@ -33,11 +33,11 @@ const Footer = () => {
                             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferer" className="text-dark me-3">
                                 <FaInstagram size={30} />
                             </a>
-                            <a href="https://wa.me/9405643702" target="_blank" rel="noopener noreferer" className="text-dark me-3">
+                            <a href="https://wa.me/9011094170" target="_blank" rel="noopener noreferer" className="text-dark me-3">
                                 <FaWhatsapp size={30} />
                             </a>
-                            <a href="https://www.google.com" target="_blank" rel="noopener noreferer" className="text-dark me-3">
-                                <FaGoogle size={30} />
+                            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferer" className="text-dark me-3">
+                                <FaLinkedin size={30} />
                             </a>
                         </div>
                     </div>

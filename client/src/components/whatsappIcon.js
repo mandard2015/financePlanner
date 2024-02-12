@@ -23,7 +23,7 @@ const WhatsAppIcon = () => {
       <div style={{
         backgroundColor: '#25d366', color: '#fff', borderRadius: '50%', padding: '10px',
         marginBottom: '10px', cursor: 'pointer', display: 'flex', alignItems: 'center',
-        justifyContent: 'center', fontSize: '20px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)',
+        justifyContent: 'center', fontSize: '20px', boxShadow: '0 0 15px rgba(7, 180, 0)',
         zIndex: '1000'
       }}
         onClick={openWhatsApp}>
@@ -32,7 +32,7 @@ const WhatsAppIcon = () => {
       <div style={{
         backgroundColor: '#25d366', color: '#fff', borderRadius: '50%', padding: '10px',
         marginBottom: '10px', cursor: 'pointer', display: 'flex', alignItems: 'center',
-        justifyContent: 'center', fontSize: '20px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)',
+        justifyContent: 'center', fontSize: '20px', boxShadow: '0 0 15px rgba(7, 180, 0)',
         zIndex: '1000'
       }}
         onClick={openDialer}>

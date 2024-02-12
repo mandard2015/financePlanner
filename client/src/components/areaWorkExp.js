@@ -4,53 +4,83 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const WorkExp = () => {
     const [logos, setLogos] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         axios.get('http://localhost:5000/api/logos')
-            .then(response => setLogos(response.data))
-            .catch(error => console.error(error));
+            .then(response => {
+                setLogos(response.data);
+                setLoading(false);
+            })
+            .catch(error => {
+                console.error(error);
+                setLoading(false);
+            });
     }, []);
 
     const keyframes = `
     @keyframes slide {
-        from {
-          transform: translateX(100%);
+        0% {
+          transform: translateX(0%);
         }
-        to {
+        100% {
           transform: translateX(-100%);
         }
       }`;
 
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
     return (
-        <section>
+        <section id="workExp" style={{ paddingTop: '80px'}}>
             <div className='container bg-light'>
                 <div className='row m-3'>
-                <div className='col p-3'>
-                    <img style={{ width: '150px'}} src='/images/Anand.jpg' />
-                    <h5>Mr. Anand Deshmukh</h5>
-                </div>
-                <div className='col p-3'>
-                    <h3>Hello...</h3>
-                    <p> With a comprehensive range of insurance products and services, we are committed
-                         to meeting the diverse needs of customers across the country.</p>
-                </div>
+                    <div className='col p-3'>
+                        <img style={{ width: '150px' }} src='/images/Anand.jpg' />
+                        <h5>Mr. Anand Deshmukh</h5>
+                    </div>
+                    <div className='col p-3'>
+                        <h3>Hello...</h3>
+                        <p> With a comprehensive range of insurance products and services, we are committed
+                            to meeting the diverse needs of customers across the country.</p>
+                    </div>
                 </div>
             </div>
-            <div className='row m-3 px-3' style={{ fontFamily: 'monospace', color: 'ButtonText' }}>
-                <h3>Associate Partners</h3>
-                <style>{keyframes}</style>
-                <div style={{ overflow: 'hidden', whiteSpace: 'nowrap', alignItems: 'center',
-                 display: 'flex'}}>
-                    {logos.map((logo) => (
-                        <div className='mx-3 col-lg-3 col-sm-4 col-6'>
-                        <img
-                        key={logo._id}
-                            style={{ width:'100%', marginRight: '20px', animation: 'slide 10s linear infinite' }}
-                            src={`http://localhost:3000${logo.imageUrl}`}
-                            alt={logo.name}
-                        />
-                        </div>
-                    ))}
+            <div className='container'>
+                <div className='row m-3 px-3' style={{ overflow: 'hidden', fontFamily: 'monospace', color: 'ButtonText' }}>
+                    <h3>Associate Partners</h3>
+                    <style>{keyframes}</style>
+                    <div style={{ /*overflow: 'hidden',*/ whiteSpace: 'nowrap', alignItems: 'center',
+                        display: 'flex', animation: 'slide 20s linear infinite'
+                    }}>
+                        {logos.map((logo) => (
+                            <div key={logo._id} className='mx-3 col-lg-3 col-sm-4 col-6'>
+                                <img
+                                    style={{
+                                        maxHeight: '150px', width: '100%', marginRight: '20px',
+                                        animation: `slide 15s linear infinite`
+                                    }}
+                                    src={`http://localhost:3000${logo.imageUrl}`}
+                                    alt={logo.name}
+                                />
+                            </div>
+                        ))}
+                        {logos.map((logo, index) => (
+                            <div key={`duplicate_${index}`} className='mx-3 col-lg-3 col-sm-4 col-6'>
+                                <img
+                                    style={{
+                                        maxHeight: '150px',
+                                        width: '100%',
+                                        marginRight: '20px',
+                                        animation: `slide 15s linear infinite`
+                                    }}
+                                    src={`http://localhost:3000${logo.imageUrl}`}
+                                    alt={logo.name}
+                                />
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
             <div className='container' style={{ backgroundImage: '-webkit-linear-gradient(60deg, #5498fd 25%, #ff2ae7 75%)' }}>

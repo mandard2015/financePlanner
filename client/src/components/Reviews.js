@@ -47,17 +47,17 @@ const Reviews = () => {
     };
 
     return (
-        <div className="container mt-4" style={{ fontFamily: 'monospace' }}>
-            <div className='row' style={{ height: '33%' }}>
+        <div id="reviews" className="container mt-4" style={{ fontFamily: 'monospace', height: '40%' }}>
+            <div className='row'>
                 <div className='col-md-9'>
                     <h3>Customer Reviews</h3>
                     {reviews.length > 0 ? (
-                        <Carousel fade data-bs-theme="dark" style={{height: '75%'}}>
+                        <Carousel fade data-bs-theme="dark" style={{height: '90%'}}>
                             {reviews.map((review, index) => (
                                 <Carousel.Item key={index}>
                                     <div className='text-center'>
                                     <h3>{review.name}</h3>
-                                    <p>{review.reviewText}</p>
+                                    <p style={{ fontFamily: 'cursive'}}>{review.reviewText}</p>
                                     <p>Rating: {Array.from({ length: review.rating }, (_, index) => <span key={index}>⭐</span>)}</p>
                                     </div>
                                 </Carousel.Item>
