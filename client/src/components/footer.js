@@ -6,13 +6,14 @@ const Footer = () => {
     return (
         <footer id="contact" className="bg-light text-dark py-4">
             <div className="container">
-                <div className="row justify-content-around">
+                <div className="row justify-content-around px-3"  style={{ fontVariant: 'small-caps', textAlign: 'center', fontWeight: 'bold'}}>
                     <div className="col-md-4 justify-content-center">
                         <h4 className="mx-3">Contact Info</h4>
                         <h5>Mr. Anand Deshmukh</h5>
                         <p className="mb-1"><FaPhone className="me-2" />
                             9011094170
-                        <FaPhone className="mx-2" />
+                        <br/>
+                        <FaPhone className="mx-0 me-2" />
                             8698405919
                         </p>
                         <p className="mb-1">

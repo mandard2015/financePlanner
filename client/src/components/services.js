@@ -56,43 +56,42 @@ const ServiceSlider = () => {
 
     return (
         <div>
-            <div className='pt-5 mt-3'>
+            <div className='pt-5 mt-3' style={{ width: '100%'}}>
                 <Slider {...sliderSettings}>
                     {slides.map((slide, index) => (
-                        <div key={index}>
-                            <div style={{
-                                backgroundImage: `url(${process.env.PUBLIC_URL + slide.imageUrl})`, position: 'relative',
-                                textAlign: 'center', height: '400px',
-                                backgroundPosition: 'center', backgroundSize: 'cover'
-                            }}>
+                        <div key={index} className='row mx-0' style={{ width: '100%'}}>
+                            <div style={{ position: 'relative', padding: '0'}}>
+                                <img src={process.env.PUBLIC_URL + slide.imageUrl}
+                                alt={slide.title}
+                                style={{width: '100%', height: 'auto', maxHeight: '400px', minHeight: '250px'}}/>
                                 <div style={{
                                     position: 'absolute', top: '40%', left: '10%', fontWeight: 'bold',
-                                    fontFamily: 'cursive', color: 'white', textAlign: 'center', textShadow: '2px 2px 4px rgba(4, 0, 255)'
+                                    fontFamily: 'cursive', color: 'white', textAlign: 'center', textShadow: '0px 0px 9px rgba(4, 0, 255)'
                                 }}>
-                                    <h2 style={{ fontSize: '2rem', marginBottom: '10px' }}>{slide.title}</h2>
-                                    <p style={{ fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto' }}>{slide.content}</p>
+                                    <h2 style={{ fontSize: 'clamp(1.5rem, 5vw, 3rem)', marginBottom: '10px' }}>{slide.title}</h2>
+                                    <p style={{ fontSize: 'clamp(0.9rem, 2vw, 3rem)', maxWidth: '600px', margin: '0 auto' }}>{slide.content}</p>
                                 </div>
                             </div>
                         </div>
                     ))}
                 </Slider>
             </div>
-            <div id="about" className='container' style={{ marginTop: '30px' }}>
-                <div className='row m-3 pt-3 bg-light' style={{ borderRadius: '15px' }}>
+            <div id="about" className='container px-1' style={{ marginTop: '30px' }}>
+                <div className='row my-3 pt-3 px-1 bg-light' style={{ borderRadius: '15px' }}>
                     <div className='text-center col-md-5 col-lg-4'>
                         <img style={{ width: '80%', position: 'center', borderRadius: '20px', marginBottom: '15px' }}
-                            src='/images/self1.jpg' />
+                            src='/images/self1.jpg' alt='Mr. Anand Deshmukh' />
                         <h5>Mr. Anand Deshmukh</h5>
                     </div>
                     <div className='col'>
                         <h3>Welcome...</h3>
                         <p> Our commitment to transparency defines our identity, and we're always ready to assist you. Offering
                             a comprehensive range of insurance products and services, we are dedicated to meeting the diverse needs
-                            of our customers.<br />At our core, we focus on shaping your future. Our primary goal is to
+                            of our customers.</p><p>At our core, we focus on shaping your future. Our primary goal is to
                             empower you with a precise investment strategy that aligns perfectly with your goals. Trust us to turn
                             your aspirations into tangible achievements, granting you ultimate financial independence. Having guided
                             over 1000 individuals and families to attain complete financial freedom, we possess the expertise to
-                            navigate the complexities of financial planning and investments.<br />Within our Advisory Services, we've
+                            navigate the complexities of financial planning and investments.</p><p>Within our Advisory Services, we've
                             fine-tuned the process to simplify complexities, ensuring our clients feel at ease as they chart their course
                             towards financial prosperity. Priority is given to our clients, and their satisfaction is our topmost concern.
                             With us, rest assured that your financial well-being is always our paramount focus.</p>

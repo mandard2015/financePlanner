@@ -25,7 +25,7 @@ const Reviews = () => {
                 ...props.style,
                 display: "block",
                 position: "absolute",
-                // left: "10px",
+                left: "5px",
                 top: "50%",
                 transform: "translateY(-50%)",
                 fontSize: "24px",
@@ -94,14 +94,15 @@ const Reviews = () => {
         <div id="reviews" className="container mt-4" style={{ fontFamily: 'monospace', height: '40%' }}>
             <div className='row'>
                 <div className='col-md-9'>
-                    <h3>Customer Reviews</h3>
+                    <h3 style={{ fontVariant: 'small-caps', textAlign: 'center', fontWeight: 'bold' }}>
+                        Testimonials</h3>
                     {reviews.length > 0 ? (
                         <Slider {...sliderSettings}>
                             {reviews.map((review, index) => (
                                 <div className='text-center px-2' key={index}>
                                     <h3>{review.name}</h3>
-                                    <p style={{ fontFamily: 'cursive' }}>{review.reviewText}</p>
-                                    <p>Rating: {Array.from({ length: review.rating }, (_, index) => <span key={index}>⭐</span>)}</p>
+                                    <p style={{ fontFamily: 'cursive', margin: '5px' }}>{review.reviewText}</p>
+                                    <p className='m-1'>Rating: {Array.from({ length: review.rating }, (_, index) => <span key={index}>⭐</span>)}</p>
                                 </div>
                             ))}
                         </Slider>
@@ -113,7 +114,7 @@ const Reviews = () => {
                     <form onSubmit={handleSubmit}>
                         <h3>Add review</h3>
                         <div className='form-group'>
-                            <label htmlFor="name" className='form-label'>Name:</label>
+                            <label htmlFor="name" className='form-label mb-1'>Name:</label>
                             <input type="text" id="name" className='form-control-sm ml-1' value={name} onChange={(e) => setName(e.target.value)} required />
                         </div>
                         <div className='form-group m-1'>
@@ -133,6 +134,11 @@ const Reviews = () => {
                         <button type="submit" className='btn btn-primary'>Submit Review</button>
                     </form>
                 </div>
+            </div>
+            <div className='row m-3'>
+                <Slider {...sliderSettings}>
+                    <img src={process.env.PUBLIC_URL + '/images/award1.jpg'} style={{ width: '80%', maxHeight: '300px', minHeight: '250px' }} alt='Appreciation' />
+                </Slider>
             </div>
         </div>
     );
