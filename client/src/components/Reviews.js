@@ -91,7 +91,7 @@ const Reviews = () => {
     };
 
     return (
-        <div id="reviews" className="container mt-4" style={{ fontFamily: 'monospace', height: '40%' }}>
+        <div id="reviews" className="container mt-4 h-40" style={{ fontFamily: 'monospace' }}>
             <div className='row'>
                 <div className='col-md-9'>
                     <h3 style={{ fontVariant: 'small-caps', textAlign: 'center', fontWeight: 'bold' }}>
@@ -99,10 +99,12 @@ const Reviews = () => {
                     {reviews.length > 0 ? (
                         <Slider {...sliderSettings}>
                             {reviews.map((review, index) => (
-                                <div className='text-center px-2' key={index}>
-                                    <h3>{review.name}</h3>
+                                <div className='px-4 text-center' key={index}>
+                                    <div style={{ display: 'flex', justifyContent: 'space-around', margin: '0'}}>
+                                    <h3 className='m-0'>{review.name}</h3>
+                                    <p>{Array.from({ length: review.rating }, (_, index) => <span key={index}>⭐</span>)}</p>
+                                    </div>
                                     <p style={{ fontFamily: 'cursive', margin: '5px' }}>{review.reviewText}</p>
-                                    <p className='m-1'>Rating: {Array.from({ length: review.rating }, (_, index) => <span key={index}>⭐</span>)}</p>
                                 </div>
                             ))}
                         </Slider>
@@ -136,8 +138,15 @@ const Reviews = () => {
                 </div>
             </div>
             <div className='row m-3'>
+                <h3 style={{ fontVariant: 'small-caps', textAlign: 'center', fontWeight: 'bold' }}>
+                    Awards and Appreciation</h3>
                 <Slider {...sliderSettings}>
-                    <img src={process.env.PUBLIC_URL + '/images/award1.jpg'} style={{ width: '80%', maxHeight: '300px', minHeight: '250px' }} alt='Appreciation' />
+                    <div>
+                    <div style={{ display: 'flex', justifyContent: 'center' }}>
+                        <img src={process.env.PUBLIC_URL + '/images/award1.jpg'}
+                            style={{ width: '80%', height: 'auto', maxHeight: '400px', minHeight: '200px' }} alt='Appreciation' />
+                    </div>
+                    </div>
                 </Slider>
             </div>
         </div>

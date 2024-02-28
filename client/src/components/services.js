@@ -66,7 +66,7 @@ const ServiceSlider = () => {
                                 style={{width: '100%', height: 'auto', maxHeight: '400px', minHeight: '250px'}}/>
                                 <div style={{
                                     position: 'absolute', top: '40%', left: '10%', fontWeight: 'bold',
-                                    fontFamily: 'cursive', color: 'white', textAlign: 'center', textShadow: '0px 0px 9px rgba(4, 0, 255)'
+                                    fontFamily: 'Ubuntu', color: 'white', textAlign: 'center', textShadow: '0px 0px 8px rgba(4, 0, 255)'
                                 }}>
                                     <h2 style={{ fontSize: 'clamp(1.5rem, 5vw, 3rem)', marginBottom: '10px' }}>{slide.title}</h2>
                                     <p style={{ fontSize: 'clamp(0.9rem, 2vw, 3rem)', maxWidth: '600px', margin: '0 auto' }}>{slide.content}</p>
@@ -76,8 +76,8 @@ const ServiceSlider = () => {
                     ))}
                 </Slider>
             </div>
-            <div id="about" className='container px-1' style={{ marginTop: '30px' }}>
-                <div className='row my-3 pt-3 px-1 bg-light' style={{ borderRadius: '15px' }}>
+            <div id="about" className='container w-100 px-1' style={{ marginTop: '30px' }}>
+                <div className='row my-3 pt-3 px-1 bg-light w-100' style={{ borderRadius: '15px' }}>
                     <div className='text-center col-md-5 col-lg-4'>
                         <img style={{ width: '80%', position: 'center', borderRadius: '20px', marginBottom: '15px' }}
                             src='/images/self1.jpg' alt='Mr. Anand Deshmukh' />
@@ -90,7 +90,7 @@ const ServiceSlider = () => {
                             of our customers.</p><p>At our core, we focus on shaping your future. Our primary goal is to
                             empower you with a precise investment strategy that aligns perfectly with your goals. Trust us to turn
                             your aspirations into tangible achievements, granting you ultimate financial independence. Having guided
-                            over 1000 individuals and families to attain complete financial freedom, we possess the expertise to
+                            over 1500 individuals and families to attain complete financial freedom, we possess the expertise to
                             navigate the complexities of financial planning and investments.</p><p>Within our Advisory Services, we've
                             fine-tuned the process to simplify complexities, ensuring our clients feel at ease as they chart their course
                             towards financial prosperity. Priority is given to our clients, and their satisfaction is our topmost concern.
