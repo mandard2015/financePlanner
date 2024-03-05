@@ -100,9 +100,9 @@ const Reviews = () => {
                         <Slider {...sliderSettings}>
                             {reviews.map((review, index) => (
                                 <div className='px-4 text-center' key={index}>
-                                    <div style={{ display: 'flex', justifyContent: 'space-around', margin: '0'}}>
-                                    <h3 className='m-0'>{review.name}</h3>
-                                    <p>{Array.from({ length: review.rating }, (_, index) => <span key={index}>⭐</span>)}</p>
+                                    <div style={{ display: 'flex', justifyContent: 'space-around', margin: '0' }}>
+                                        <h3 className='m-0'>{review.name}</h3>
+                                        <p>{Array.from({ length: review.rating }, (_, index) => <span key={index}>⭐</span>)}</p>
                                     </div>
                                     <p style={{ fontFamily: 'cursive', margin: '5px' }}>{review.reviewText}</p>
                                 </div>
@@ -142,10 +142,34 @@ const Reviews = () => {
                     Awards and Appreciation</h3>
                 <Slider {...sliderSettings}>
                     <div>
-                    <div style={{ display: 'flex', justifyContent: 'center' }}>
-                        <img src={process.env.PUBLIC_URL + '/images/award1.jpg'}
-                            style={{ width: '80%', height: 'auto', maxHeight: '400px', minHeight: '200px' }} alt='Appreciation' />
+                        <div style={{ display: 'flex', justifyContent: 'center' }}>
+                            <img src={process.env.PUBLIC_URL + '/images/award1.jpg'}
+                                style={{ width: '90%', maxWidth: '900px', height: 'auto', maxHeight: '65vh', minHeight: '200px' }} alt='Appreciation' />
+                        </div>
                     </div>
+                    <div>
+                        <div style={{ display: 'flex', justifyContent: 'center' }}>
+                            <img src={process.env.PUBLIC_URL + '/images/LIC T.jpg'}
+                                style={{ width: '90%', maxWidth: '900px', height: 'auto', maxHeight: '65vh', minHeight: '200px' }} alt='Appreciation' />
+                        </div>
+                    </div>
+                    <div>
+                        <div style={{ display: 'flex', justifyContent: 'center' }}>
+                            <img src={process.env.PUBLIC_URL + '/images/Star Health T.jpg'}
+                                style={{ width: '90%', maxWidth: '900px', height: 'auto', maxHeight: '65vh', minHeight: '200px' }} alt='Appreciation' />
+                        </div>
+                    </div>
+                    <div>
+                        <div style={{ display: 'flex', justifyContent: 'center' }}>
+                            <img src={process.env.PUBLIC_URL + '/images/star health c.jpg'}
+                                style={{ width: '90%', maxWidth: '900px', height: 'auto', maxHeight: '65vh', minHeight: '200px' }} alt='Appreciation' />
+                        </div>
+                    </div>
+                    <div>
+                        <div style={{ display: 'flex', justifyContent: 'center' }}>
+                            <img src={process.env.PUBLIC_URL + '/images/Mutual Fund c.jpg'}
+                                style={{ width: '90%', maxWidth: '900px', height: 'auto', maxHeight: '65vh', minHeight: '200px' }} alt='Appreciation' />
+                        </div>
                     </div>
                 </Slider>
             </div>

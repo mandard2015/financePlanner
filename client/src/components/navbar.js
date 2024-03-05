@@ -22,9 +22,9 @@ const AppNavbar = () => {
                     <Nav.Link as={Link} to='product' smooth duration={500} style={{ fontWeight: 'bold', cursor: 'pointer'}}>
                         Products
                     </Nav.Link>
-                    {/* <Nav.Link as={Link} to='reviews' smooth duration={500} style={{ fontWeight: 'bold', cursor: 'pointer'}}>
+                    <Nav.Link as={Link} to='reviews' smooth duration={500} style={{ fontWeight: 'bold', cursor: 'pointer'}}>
                         Reviews
-                    </Nav.Link> */}
+                    </Nav.Link>
                     <Nav.Link as={Link} to='contact' smooth duration={500} style={{ fontWeight: 'bold', cursor: 'pointer'}}>
                         Contact Us
                     </Nav.Link>

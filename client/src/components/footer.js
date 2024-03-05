@@ -28,16 +28,16 @@ const Footer = () => {
                     <div className="col-md-4">
                         <h4 className="mt-2">Follow us</h4>
                         <div>
-                            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferer" className="text-dark me-3">
+                            <a href="https://www.facebook.com/anand.deshmukh.549" target="_blank" rel="noopener noreferer" className="text-dark me-3">
                                 <FaFacebook size={30} />
                             </a>
-                            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferer" className="text-dark me-3">
+                            <a href="https://www.instagram.com/licanand1.ad" target="_blank" rel="noopener noreferer" className="text-dark me-3">
                                 <FaInstagram size={30} />
                             </a>
                             <a href="https://wa.me/9011094170" target="_blank" rel="noopener noreferer" className="text-dark me-3">
                                 <FaWhatsapp size={30} />
                             </a>
-                            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferer" className="text-dark me-3">
+                            <a href="https://www.linkedin.com/in/anand-deshmukh-71ab7629" target="_blank" rel="noopener noreferer" className="text-dark me-3">
                                 <FaLinkedin size={30} />
                             </a>
                         </div>

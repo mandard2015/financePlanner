@@ -36,8 +36,8 @@ const WorkExp = () => {
     }
 
     return (
-        <section>
-            <div id='product' className='container'>
+        <section id='product'>
+            <div className='container'>
                 <h3 style={{
                     fontVariant: 'small-caps', fontFamily: 'monospace',
                     marginBottom: '0', textAlign: 'center', fontWeight: 'bold'
@@ -46,99 +46,99 @@ const WorkExp = () => {
                     onSelect={(k) => setKey(k)} className="mb-3">
                     <Tab eventKey="lic" title="LIC">
                         <Row>
-                            <Col>
+                            <Col className='mx-3'>
                                 <h3>LIC - Life Insurance Corporation of India</h3>
                             </Col>
                         </Row>
                         <Row>
-                            <Col className='order-md-1 order-2 mx-3'>
+                            <Col className='order-md-1 order-2 mx-4'>
                                 <p>LIC is a leading life insurance provider with a legacy of trust and reliability.
                                     Our diverse range of insurance products ensures financial security for you and your family.
                                     From traditional life insurance plans to investment-linked policies, LIC has something for everyone.</p>
                                 <p>Explore our products and secure your future with LIC. Contact us today for personalized advice and the best insurance solutions for your needs.</p>
                             </Col>
                             <Col md={4} className='text-center pb-3 order-md-2 order-1'>
-                                <img style={{ width: '85%', borderRadius: '20px' }}
-                                    src='/images/geninsurance.jpg'
+                                <img style={{ width: '80%', maxHeight: '30vh', borderRadius: '15px',  boxShadow: '0 0 15px 0 rgba(10, 10, 10, 0.3)' }}
+                                    src='/images/lictab.jpg'
                                     alt='general Insurance' />
                             </Col>
                         </Row>
                         <Row>
-                            <Col className='mx-3'>
+                            <Col className='mx-4'>
                                 <p style={{ fontWeight: 'bold' }}>Ready to safeguard your future? Call us at 9011094170 or fill out the form below to get started.</p>
                             </Col>
                         </Row>
                     </Tab>
                     <Tab eventKey="starHealth" title="Star Health">
                         <Row>
-                            <Col>
+                            <Col className='mx-3'>
                                 <h3>Star Health</h3>
                             </Col>
                         </Row>
                         <Row>
-                            <Col className='order-md-1 order-2 mx-3'>
+                            <Col className='order-md-1 order-2 mx-4'>
                                 <p>Star Health is a leading health insurance provider committed to ensuring your well-being. Our comprehensive health insurance plans cover medical expenses,
                                     hospitalization, and more. With a focus on customer-centric solutions, Star Health strives to provide the best healthcare coverage.</p>
                                 <p>Discover the benefits of our health insurance plans and prioritize your health. Connect with us today for expert advice and a personalized health insurance plan.</p>
                             </Col>
                             <Col md={4} className='text-center pb-3 order-md-2 order-1'>
-                                <img style={{ width: '85%', position: 'center', borderRadius: '20px' }}
-                                    src='/images/geninsurance.jpg'
-                                    alt='general Insurance' />
+                                <img style={{ width: '80%', maxHeight: '30vh', borderRadius: '15px',  boxShadow: '0 0 15px 0 rgba(10, 10, 10, 0.3)' }}
+                                    src='/images/health tab.jpg'
+                                    alt='Star Health Insurance' />
                             </Col>
                         </Row>
                         <Row>
-                            <Col className='mx-3'>
+                            <Col className='mx-4'>
                                 <p style={{ fontWeight: 'bold' }}> Take the first step towards a healthier life. Call us at 9011094170 or fill out the form below to learn more.</p>
                             </Col>
                         </Row>
                     </Tab>
                     <Tab eventKey="generalInsurance" title="New India Assurance">
                         <Row >
-                            <Col>
+                            <Col className='mx-3'>
                                 <h3>New India Assurance</h3>
                             </Col>
                         </Row>
                         <Row>
-                            <Col className='order-md-1 order-2 mx-3'>
+                            <Col className='order-md-1 order-2 mx-4'>
                                 <p> New India Assurance is a trusted general insurance provider known for its comprehensive range of insurance products. Our offerings include motor insurance,
                                     property insurance, travel insurance, and more. With a commitment to customer satisfaction,
                                     we provide tailored insurance solutions.</p>
                                 <p> Protect your assets and secure your travels with New India Assurance. Contact us for expert guidance and reliable insurance coverage.</p>
                             </Col>
                             <Col md={4} className='text-center pb-2 order-md-2 order-1'>
-                                <img style={{ width: '85%', position: 'center', borderRadius: '20px' }}
-                                    src='/images/geninsurance.jpg'
-                                    alt='general Insurance' />
+                                <img style={{ width: '80%', maxHeight: '30vh', borderRadius: '15px',  boxShadow: '0 0 15px 0 rgba(10, 10, 10, 0.3)' }}
+                                    src='/images/general tab.jpg'
+                                    alt='General Insurance' />
                             </Col>
                         </Row>
                         <Row>
-                            <Col className='mx-3'>
+                            <Col className='mx-4'>
                                 <p style={{ fontWeight: 'bold' }} >Safeguard what matters to you. Call us at 9011094170 or fill out the form below to discuss your insurance needs.</p>
                             </Col>
                         </Row>
                     </Tab>
                     <Tab eventKey="mutualFunds" title="Mutual Funds">
                         <Row>
-                            <Col>
+                            <Col className='mx-3'>
                                 <h3>Mutual Funds Advisor</h3>
                             </Col>
                         </Row>
                         <Row>
-                            <Col className='order-md-1 order-2 mx-3'>
+                            <Col className='order-md-1 order-2 mx-4'>
                                 <p>A mutual fund is a professionally managed investment that pools money from many investors who
                                     together purchase securities. These investors can be individuals as well as groups.</p>
                                 <p> Mutual funds involve market risks, and this is the reason why one should consult a
                                     Mutual Fund Consultant for advice before making any investment.</p>
                             </Col>
                             <Col md={4} className='text-center pb-3 order-md-2 order-1'>
-                                <img style={{ width: '85%', position: 'center', borderRadius: '20px' }}
+                                <img style={{ width: '80%', maxHeight: '30vh', borderRadius: '15px',  boxShadow: '0 0 15px 0 rgba(10, 10, 10, 0.3)' }}
                                     src='/images/geninsurance.jpg'
-                                    alt='general Insurance' />
+                                    alt='Mutual Fund' />
                             </Col>
                         </Row>
                         <Row>
-                            <Col className='mx-3'>
+                            <Col className='mx-4'>
                                 <p style={{ fontWeight: 'bold' }}>Ready to invest wisely? Call us at 9011094170 or fill out the
                                     form below to schedule a consultation.</p>
                             </Col>
@@ -200,6 +200,7 @@ const WorkExp = () => {
                     </div>
                 </div>
             </div>
+            <div  id='reviews'></div>
         </section>
     );
 };

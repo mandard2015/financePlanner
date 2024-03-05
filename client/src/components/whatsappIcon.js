@@ -6,12 +6,12 @@ import { FaWhatsapp, FaPhone } from 'react-icons/fa';
 const WhatsAppIcon = () => {
   const openWhatsApp = () => {
     // Replace '1234567890' with the actual WhatsApp number
-    const phoneNumber = '9405643702';
+    const phoneNumber = '9011094170';
     window.open(`https://wa.me/${phoneNumber}`, '_blank');
   };
 
   const openDialer = () => {
-    const phoneNumber = '9405643702';
+    const phoneNumber = '9011094170';
     window.location.href = `tel:${phoneNumber}`
   };
 

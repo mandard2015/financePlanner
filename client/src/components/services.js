@@ -49,7 +49,7 @@ const ServiceSlider = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 4000,
         nextArrow: <SampleNextArrow />,
         // nextArrow: <div className='slick-arrow' style={{ display: 'none' }}></div>,
     };
@@ -63,13 +63,13 @@ const ServiceSlider = () => {
                             <div style={{ position: 'relative', padding: '0'}}>
                                 <img src={process.env.PUBLIC_URL + slide.imageUrl}
                                 alt={slide.title}
-                                style={{width: '100%', height: 'auto', maxHeight: '400px', minHeight: '250px'}}/>
+                                style={{width: '100%', height: 'auto', maxHeight: '450px', minHeight: '250px'}}/>
                                 <div style={{
-                                    position: 'absolute', top: '40%', left: '10%', fontWeight: 'bold',
-                                    fontFamily: 'Ubuntu', color: 'white', textAlign: 'center', textShadow: '0px 0px 8px rgba(4, 0, 255)'
+                                    position: 'absolute', top: '35%', left: '10%', fontWeight: 'bold', width: '100%',
+                                    fontFamily: 'Ubuntu', color: 'black', textAlign: 'start', textShadow: '0px 0px 8px rgba(255, 255, 255)'
                                 }}>
-                                    <h2 style={{ fontSize: 'clamp(1.5rem, 5vw, 3rem)', marginBottom: '10px' }}>{slide.title}</h2>
-                                    <p style={{ fontSize: 'clamp(0.9rem, 2vw, 3rem)', maxWidth: '600px', margin: '0 auto' }}>{slide.content}</p>
+                                    <h2 style={{ fontSize: 'clamp(1.5rem, 5vw, 3rem)', fontWeight: 'bold' }}>{slide.title}</h2>
+                                    <p style={{ fontSize: 'clamp(0.9rem, 2vw, 3rem)', maxWidth: '60%', marginLeft: '0 auto' }}>{slide.content}</p>
                                 </div>
                             </div>
                         </div>
@@ -77,13 +77,13 @@ const ServiceSlider = () => {
                 </Slider>
             </div>
             <div id="about" className='container w-100 px-1' style={{ marginTop: '30px' }}>
-                <div className='row my-3 pt-3 px-1 bg-light w-100' style={{ borderRadius: '15px' }}>
+                <div className='row my-3 pt-3 bg-light w-100' style={{ borderRadius: '15px', marginLeft: '0' }}>
                     <div className='text-center col-md-5 col-lg-4'>
                         <img style={{ width: '80%', position: 'center', borderRadius: '20px', marginBottom: '15px' }}
                             src='/images/self1.jpg' alt='Mr. Anand Deshmukh' />
                         <h5>Mr. Anand Deshmukh</h5>
                     </div>
-                    <div className='col'>
+                    <div className='col' style={{ alignSelf: 'center'}}>
                         <h3>Welcome...</h3>
                         <p> Our commitment to transparency defines our identity, and we're always ready to assist you. Offering
                             a comprehensive range of insurance products and services, we are dedicated to meeting the diverse needs
@@ -102,9 +102,12 @@ const ServiceSlider = () => {
                                 <div className='col-md-6 col-lg-4 pb-3'>
                                     <div className='card bg-white border-white border-0 card_shod'
                                         style={{
-                                            borderRadius: '40px', overflow: 'hidden', minHeight: '250px',
+                                            borderRadius: '40px', overflow: 'hidden', minHeight: '425px',
                                             boxShadow: '0 0 15px 0 rgba(10, 10, 10, 0.3)'
                                         }}>
+                                        <div style={{ backgroundImage: 'url(/images/vision.jpg)', height: '200px', minHeight: '200px', 
+                                        backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center', borderColor: 'inherit'}}>
+                                        </div>
                                         <div className='card-body'>
                                             <h4 className='card-title text-center'>Vision</h4>
                                             <p className='card-text text-justify'>Responsibility is our first and last priority
@@ -115,27 +118,32 @@ const ServiceSlider = () => {
                                 <div className='col-md-6 col-lg-4 pb-3'>
                                     <div className='card bg-white border-white border-0 card_shod'
                                         style={{
-                                            borderRadius: '40px', overflow: 'hidden', minHeight: '250px',
+                                            borderRadius: '40px', overflow: 'hidden', minHeight: '425px',
                                             boxShadow: '0 0 15px 0 rgba(10, 10, 10, 0.3)'
                                         }}>
+                                        <div style={{ backgroundImage: 'url(/images/mission.jpg)', height: '200px', minHeight: '200px', 
+                                        backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center', borderColor: 'inherit'}}>
+                                        </div>
                                         <div className='card-body'>
                                             <h4 className='card-title text-center'>Mission</h4>
-                                            <p className='card-text text-justify'>We partner with the clients in long-term,
-                                                trusted financial advisory relationships. We strive to provide financial peace of
-                                                mind by delivering tailored objective advice designed to give clients the confidence
-                                                to pursue their own passion, dreams and talents.</p>
+                                            <p className='card-text text-justify'>Partner with the clients in long-term, trusted 
+                                            financial advisory relationships. Strive to provide financial peace of mind by delivering 
+                                            advice that gives client the confidence to pursue their own passion, dreams and talents.</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div className='col-md-6 col-lg-4 pb-3'>
                                     <div className='card bg-white border-white border-0 card_shod'
                                         style={{
-                                            borderRadius: '40px', overflow: 'hidden', minHeight: '250px',
+                                            borderRadius: '40px', overflow: 'hidden', minHeight: '425px',
                                             boxShadow: '0 0 15px 0 rgba(10, 10, 10, 0.3)'
                                         }}>
+                                        <div style={{ backgroundImage: 'url(/images/values.jpg)', height: '200px', minHeight: '200px', 
+                                        backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center', borderColor: 'inherit'}}>
+                                        </div>
                                         <div className='card-body'>
                                             <h4 className='card-title text-center'>Values</h4>
-                                            <p className='card-text text-justify'>Equity is our major moral principle. We are
+                                            <p className='card-text text-justify'>We go to great lengths to ensure that the services we provide are of the highest possible standard. We are
                                                 always dedicated for creating an equal opportunity for every customer in the market.</p>
                                         </div>
                                     </div>
