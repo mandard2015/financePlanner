@@ -91,9 +91,9 @@ const Reviews = () => {
     };
 
     return (
-        <div id="reviews" className="container mt-4 h-40" style={{ fontFamily: 'monospace' }}>
+        <div className="container mt-4 h-40" style={{ fontFamily: 'monospace' }}>
             <div className='row'>
-                <div className='col-md-9'>
+                <div className='col-md-9' style={{ minHeight: '200px', maxHeight: '300px', overflowY: 'scroll' }}>
                     <h3 style={{ fontVariant: 'small-caps', textAlign: 'center', fontWeight: 'bold' }}>
                         Testimonials</h3>
                     {reviews.length > 0 ? (
@@ -138,7 +138,7 @@ const Reviews = () => {
                 </div>
             </div>
             <div className='row m-3'>
-                <h3 style={{ fontVariant: 'small-caps', textAlign: 'center', fontWeight: 'bold' }}>
+                <h3 style={{ fontVariant: 'small-caps', textAlign: 'center', fontWeight: 'bold', marginTop: '8px' }}>
                     Awards and Appreciation</h3>
                 <Slider {...sliderSettings}>
                     <div>

@@ -71,36 +71,40 @@ const ServiceSlider = () => {
                                     <h2 style={{ fontSize: 'clamp(1.5rem, 5vw, 3rem)', fontWeight: 'bold' }}>{slide.title}</h2>
                                     <p style={{ fontSize: 'clamp(0.9rem, 2vw, 3rem)', maxWidth: '60%', marginLeft: '0 auto' }}>{slide.content}</p>
                                 </div>
+                                <div id="about"></div>
                             </div>
                         </div>
                     ))}
                 </Slider>
             </div>
-            <div id="about" className='container w-100 px-1' style={{ marginTop: '30px' }}>
+            <div className='container w-100 px-1' style={{ marginTop: '30px' }}>
                 <div className='row my-3 pt-3 bg-light w-100' style={{ borderRadius: '15px', marginLeft: '0' }}>
                     <div className='text-center col-md-5 col-lg-4'>
-                        <img style={{ width: '80%', position: 'center', borderRadius: '20px', marginBottom: '15px' }}
+                        <img style={{ width: '85%', position: 'center', borderRadius: '20px', marginBottom: '15px' }}
                             src='/images/self1.jpg' alt='Mr. Anand Deshmukh' />
                         <h5>Mr. Anand Deshmukh</h5>
                     </div>
                     <div className='col' style={{ alignSelf: 'center'}}>
-                        <h3>Welcome...</h3>
-                        <p> Our commitment to transparency defines our identity, and we're always ready to assist you. Offering
-                            a comprehensive range of insurance products and services, we are dedicated to meeting the diverse needs
-                            of our customers.</p><p>At our core, we focus on shaping your future. Our primary goal is to
-                            empower you with a precise investment strategy that aligns perfectly with your goals. Trust us to turn
-                            your aspirations into tangible achievements, granting you ultimate financial independence. Having guided
-                            over 1500 individuals and families to attain complete financial freedom, we possess the expertise to
-                            navigate the complexities of financial planning and investments.</p><p>Within our Advisory Services, we've
-                            fine-tuned the process to simplify complexities, ensuring our clients feel at ease as they chart their course
-                            towards financial prosperity. Priority is given to our clients, and their satisfaction is our topmost concern.
-                            With us, rest assured that your financial well-being is always our paramount focus.</p>
+                        <h3>Greetings and welcome to my website!</h3>
+                        <p>Allow me to introduce myself - I am Anand Deshmukh, and I am dedicated to providing transparent and reliable 
+                            assistance tailored to meet your needs. As you navigate through the various fields I specialize in, you'll 
+                            discover a commitment to transparency that forms the very core of my identity.</p><p>At the heart of my mission is a 
+                            focus on shaping your future. I am here to empower you with a precise investment strategy that perfectly aligns 
+                            with your goals. Trust me to turn your aspirations into tangible achievements, granting you the ultimate in 
+                            financial independence. Over the years, I've had the privilege of guiding more than 1500 individuals and 
+                            families towards complete financial freedom, showcasing my expertise in navigating the complexities of 
+                            financial planning and investments.</p>
+                            <p>Within our Advisory Services, I've fine-tuned the process to simplify complexities, ensuring you feel at ease as 
+                            you chart your course towards financial prosperity. Your satisfaction is my topmost concern, and priority is always 
+                            given to your needs. With me, rest assured that your financial well-being is my paramount focus. Feel free to explore 
+                            the comprehensive range of insurance products and services I offer, all designed to meet your diverse needs.</p>
+                            <p>Thank you for visiting, and I look forward to assisting you on your journey to financial success!</p>
                     </div>
-                    <div className='row m-auto mt-2'>
+                    <div className='row m-auto mt-3'>
                         {showCards && (
                             <>
                                 <div className='col-md-6 col-lg-4 pb-3'>
-                                    <div className='card bg-white border-white border-0 card_shod'
+                                    <div className='card bg-white border-white border-0 mx-3 card_shod'
                                         style={{
                                             borderRadius: '40px', overflow: 'hidden', minHeight: '425px',
                                             boxShadow: '0 0 15px 0 rgba(10, 10, 10, 0.3)'
@@ -116,7 +120,7 @@ const ServiceSlider = () => {
                                     </div>
                                 </div>
                                 <div className='col-md-6 col-lg-4 pb-3'>
-                                    <div className='card bg-white border-white border-0 card_shod'
+                                    <div className='card bg-white border-white border-0 mx-3 card_shod'
                                         style={{
                                             borderRadius: '40px', overflow: 'hidden', minHeight: '425px',
                                             boxShadow: '0 0 15px 0 rgba(10, 10, 10, 0.3)'
@@ -133,7 +137,7 @@ const ServiceSlider = () => {
                                     </div>
                                 </div>
                                 <div className='col-md-6 col-lg-4 pb-3'>
-                                    <div className='card bg-white border-white border-0 card_shod'
+                                    <div className='card bg-white border-white border-0 mx-3 card_shod'
                                         style={{
                                             borderRadius: '40px', overflow: 'hidden', minHeight: '425px',
                                             boxShadow: '0 0 15px 0 rgba(10, 10, 10, 0.3)'
@@ -151,7 +155,7 @@ const ServiceSlider = () => {
                             </>
                         )}
                     </div>
-                    <div className='toggle-cards-wrapper'>
+                    <div id='product' className='toggle-cards-wrapper'>
                         <div className={`toggle-cards ${showCards ? 'open' : ''}`} onClick={toggleCards}>
                             <FaChevronDown className={`arrow-icon ${showCards ? 'hidden' : ''}`} />
                             <FaChevronUp className={`arrow-icon ${showCards ? '' : 'hidden'}`} />
