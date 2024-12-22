@@ -1,25 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
 import { Tab, Tabs, Row, Col } from 'react-bootstrap';
 import CountUp from 'react-countup';
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const WorkExp = () => {
-    const [logos, setLogos] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [key, setKey] = useState('lic');
+const logos = [
+    { id: 1, name: "LIC India", imageUrl: "/images/lic.png" },
+    { id: 2, name: "New India Assurance", imageUrl: "/images/NIA_Logo.png" },
+    { id: 3, name: "Star Health And Allied Insurance", imageUrl: "/images/StarHealth.png" },
+    { id: 4, name: "Association of Mutual Funds in India", imageUrl: "/images/AMFI.png" },
+];
 
-    useEffect(() => {
-        axios.get('http://localhost:5000/api/logos')
-            .then(response => {
-                setLogos(response.data);
-                setLoading(false);
-            })
-            .catch(error => {
-                console.error(error);
-                setLoading(false);
-            });
-    }, []);
+const WorkExp = () => {
+    const [key, setKey] = useState('lic');
 
     const keyframes = `
     @keyframes slide {
@@ -30,10 +22,6 @@ const WorkExp = () => {
           transform: translateX(-100%);
         }
       }`;
-
-    if (loading) {
-        return <div className='text-center m-3'>Loading...</div>;
-    }
 
     return (
         <section>
@@ -55,7 +43,7 @@ const WorkExp = () => {
                                 <p>LIC is a leading life insurance provider with a legacy of trust and reliability.
                                     Our diverse range of insurance products ensures financial security for you and your family.
                                     From traditional life insurance plans to investment-linked policies, LIC has something for everyone.</p>
-                                <p>Explore our products and secure your future with LIC. Contact us today for personalized advice and 
+                                <p>Explore our products and secure your future with LIC. Contact us today for personalized advice and
                                     the best insurance solutions for your needs. Below given are some of the products that may interest you.</p>
                                 <ul>
                                     <li>Term Insurance refund of Premium</li>
@@ -67,7 +55,7 @@ const WorkExp = () => {
                                 </ul>
                             </Col>
                             <Col md={4} className='text-center pb-3 order-md-2 order-1'>
-                                <img style={{ width: '80%', maxHeight: '30vh', borderRadius: '15px',  boxShadow: '0 0 15px 0 rgba(10, 10, 10, 0.3)' }}
+                                <img style={{ width: '80%', maxHeight: '30vh', borderRadius: '15px', boxShadow: '0 0 15px 0 rgba(10, 10, 10, 0.3)' }}
                                     src='/images/lictab.jpg'
                                     alt='LIC Of India' />
                             </Col>
@@ -86,11 +74,11 @@ const WorkExp = () => {
                         </Row>
                         <Row>
                             <Col className='order-md-1 order-2 mx-4'>
-                                <p>Star Health is a leading health insurance provider committed to ensuring your well-being. Our 
-                                    comprehensive health insurance plans cover medical expenses, hospitalization, and more. With a 
+                                <p>Star Health is a leading health insurance provider committed to ensuring your well-being. Our
+                                    comprehensive health insurance plans cover medical expenses, hospitalization, and more. With a
                                     focus on customer-centric solutions, Star Health strives to provide the best healthcare coverage.</p>
-                                <p>Discover the benefits of our health insurance plans and prioritize your health. Connect with us 
-                                    today for expert advice and a personalized health insurance plan. Here are some plans that may be 
+                                <p>Discover the benefits of our health insurance plans and prioritize your health. Connect with us
+                                    today for expert advice and a personalized health insurance plan. Here are some plans that may be
                                     of interest to you.</p>
                                 <ul>
                                     <li>Arogya Sanjeevani</li>
@@ -102,7 +90,7 @@ const WorkExp = () => {
                                 </ul>
                             </Col>
                             <Col md={4} className='text-center pb-3 order-md-2 order-1'>
-                                <img style={{ width: '80%', maxHeight: '30vh', borderRadius: '15px',  boxShadow: '0 0 15px 0 rgba(10, 10, 10, 0.3)' }}
+                                <img style={{ width: '80%', maxHeight: '30vh', borderRadius: '15px', boxShadow: '0 0 15px 0 rgba(10, 10, 10, 0.3)' }}
                                     src='/images/health tab.jpg'
                                     alt='Star Health Insurance' />
                             </Col>
@@ -121,10 +109,10 @@ const WorkExp = () => {
                         </Row>
                         <Row>
                             <Col className='order-md-1 order-2 mx-4'>
-                                <p> New India Assurance is a trusted general insurance provider known for its comprehensive range of 
-                                    insurance products. Our offerings include motor insurance, property insurance, travel insurance, 
+                                <p> New India Assurance is a trusted general insurance provider known for its comprehensive range of
+                                    insurance products. Our offerings include motor insurance, property insurance, travel insurance,
                                     and more. With a commitment to customer satisfaction, we provide tailored insurance solutions.</p>
-                                <p> Protect your assets and secure your travels with New India Assurance. Contact us for expert 
+                                <p> Protect your assets and secure your travels with New India Assurance. Contact us for expert
                                     guidance and reliable insurance coverage. Here are some products that may be of interest to you.</p>
                                 <ul>
                                     <li>Household Insurance</li>
@@ -137,7 +125,7 @@ const WorkExp = () => {
                                 </ul>
                             </Col>
                             <Col md={4} className='text-center pb-2 order-md-2 order-1'>
-                                <img style={{ width: '80%', maxHeight: '30vh', borderRadius: '15px',  boxShadow: '0 0 15px 0 rgba(10, 10, 10, 0.3)' }}
+                                <img style={{ width: '80%', maxHeight: '30vh', borderRadius: '15px', boxShadow: '0 0 15px 0 rgba(10, 10, 10, 0.3)' }}
                                     src='/images/general tab.jpg'
                                     alt='General Insurance' />
                             </Col>
@@ -159,7 +147,7 @@ const WorkExp = () => {
                                 <p>A mutual fund is a professionally managed investment that pools money from many investors who
                                     together purchase securities. These investors can be individuals as well as groups.</p>
                                 <p> Mutual funds involve market risks, and this is the reason why one should consult a
-                                    Mutual Fund Consultant for advice before making any investment. Learn more about the 
+                                    Mutual Fund Consultant for advice before making any investment. Learn more about the
                                     different types of Mutual Funds listed as</p>
                                 <ul>
                                     <li>Equity Funds.</li>
@@ -172,7 +160,7 @@ const WorkExp = () => {
                                 </ul>
                             </Col>
                             <Col md={4} className='text-center pb-3 order-md-2 order-1'>
-                                <img style={{ width: '80%', maxHeight: '30vh', borderRadius: '15px',  boxShadow: '0 0 15px 0 rgba(10, 10, 10, 0.3)' }}
+                                <img style={{ width: '80%', maxHeight: '30vh', borderRadius: '15px', boxShadow: '0 0 15px 0 rgba(10, 10, 10, 0.3)' }}
                                     src='/images/geninsurance.jpg'
                                     alt='Mutual Fund' />
                             </Col>
@@ -197,7 +185,7 @@ const WorkExp = () => {
                                         maxHeight: '150px', width: '100%', marginRight: '20px',
                                         animation: `slide 15s linear infinite`
                                     }}
-                                    src={`http://localhost:3000${logo.imageUrl}`}
+                                    src={process.env.PUBLIC_URL + logo.imageUrl}
                                     alt={logo.name}
                                 />
                             </div>
@@ -211,7 +199,7 @@ const WorkExp = () => {
                                         marginRight: '20px',
                                         animation: `slide 15s linear infinite`
                                     }}
-                                    src={`http://localhost:3000${logo.imageUrl}`}
+                                    src={process.env.PUBLIC_URL + logo.imageUrl}
                                     alt={logo.name}
                                 />
                             </div>
@@ -222,11 +210,11 @@ const WorkExp = () => {
             <div className='container p-3' style={{ backgroundImage: '-webkit-linear-gradient(60deg, #5498fd 25%, #ff2ae7 75%)' }}>
                 <div className='row p-3 text-center' style={{ justifyContent: 'center', fontFamily: 'monospace', color: 'white' }}>
                     <div id="reviews" className='col-lg-3 col-sm-6 p-3'>
-                        <h3> <CountUp start={0} end={17} duration={2} separator=" " />+</h3>
+                        <h3> <CountUp start={0} end={19} duration={2} separator=" " />+</h3>
                         <h4>YEARS</h4>
                     </div>
                     <div className='col-lg-3 col-sm-6 p-3'>
-                        <h3> <CountUp start={0} end={1500} duration={2} separator="" />+</h3>
+                        <h3> <CountUp start={0} end={2000} duration={2} separator="" />+</h3>
                         <h4>FAMILIES</h4>
                     </div>
                     <div className='col-lg-3 col-sm-6 p-3'>
@@ -234,7 +222,7 @@ const WorkExp = () => {
                         <h4>POLICIES</h4>
                     </div>
                     <div className='col-lg-3 col-sm-6 p-3'>
-                        <h3> <CountUp start={0} end={55} duration={2} separator=" " />+</h3>
+                        <h3> <CountUp start={0} end={65} duration={2} separator=" " />+</h3>
                         <h4>Team</h4>
                     </div>
                 </div>
