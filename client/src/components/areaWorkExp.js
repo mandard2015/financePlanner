@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const logos = [
     { id: 1, name: "LIC India", imageUrl: "/images/lic.png" },
-    { id: 2, name: "New India Assurance", imageUrl: "/images/NIA_Logo.png" },
+    { id: 2, name: "New India Assurance", imageUrl: "/images/NIA_logo.png" },
     { id: 3, name: "Star Health And Allied Insurance", imageUrl: "/images/StarHealth.png" },
     { id: 4, name: "Association of Mutual Funds in India", imageUrl: "/images/AMFI.png" },
 ];
