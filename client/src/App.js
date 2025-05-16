@@ -6,7 +6,6 @@ import Reviews from './components/Reviews';
 import WhatsAppIcon from './components/whatsappIcon';
 import Footer from './components/footer';
 import WorkExp from './components/areaWorkExp';
-import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (

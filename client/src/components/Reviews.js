@@ -2,152 +2,109 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import "bootstrap/dist/css/bootstrap.min.css";
 
 const reviews = [
     {
         id: 1, name: "Deshmukh",
         rating: 5,
+        profession: "Financial Advisor",
         reviewText: "Exceptional service from my financial advisor! He has strong expertise in insurance and mediclaim services. Highly recommended for anyone seeking reliable financial advice in insurance matters."
     },
     {
-        id: 1, name: "M M. Dhamane",
-        rating: 4,
-        reviewText: "Any time hepful."
+        id: 2, name: "M M. Dhamane",
+        profession: "Government Officer", rating: 4, reviewText: "Any time helpful."
     },
     {
-        id: 1, name: "ashish sharma ",
-        rating: 5,
-        reviewText: "very good "
+        id: 3, name: "Ashish Sharma",
+        profession: "Businessman", rating: 5, reviewText: "Very good"
     },
     {
-        id: 1, name: "Balasaheb chavan",
-        rating: 5,
-        reviewText: "Good advised "
+        id: 4, name: "Balasaheb Chavan",
+        profession: "Retired Teacher", rating: 5, reviewText: "Good advised"
     },
     {
-        id: 1, name: "Arvind Bhosale ",
-        rating: 5,
-        reviewText: "उत्कृष्ट सेवा हाच ध्यास.. "
+        id: 5, name: "Arvind Bhosale",
+        profession: "Senior Manager", rating: 5, reviewText: "उत्कृष्ट सेवा हाच ध्यास.."
     },
     {
-        id: 1, name: "Usha ",
-        rating: 5,
-        reviewText: "समर्पण"
-    }];
+        id: 6, name: "Usha",
+        profession: "Doctor", rating: 5, reviewText: "समर्पण"
+    }
+];
+
+const Arrow = ({ onClick, direction }) => (
+    <div
+        onClick={onClick}
+        className={`absolute top-1/2 transform -translate-y-1/2 text-2xl cursor-pointer z-10 ${direction === 'left' ? 'left-2' : 'right-2'} text-black`}
+    >
+        {direction === 'left' ? '‹' : '›'}
+    </div>
+);
+
+const sliderSettings = {
+    accessibility: true,
+    dots: true,
+    fade: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    adaptiveHeight: true,
+    prevArrow: <Arrow direction="left" />,
+    nextArrow: <Arrow direction="right" />
+};
 
 const Reviews = () => {
-
-    const CustomPrevArrow = props => (
-        <div
-            onClick={props.onClick}
-            style={{
-                ...props.style,
-                display: "block",
-                position: "absolute",
-                left: "5px",
-                top: "50%",
-                transform: "translateY(-50%)",
-                fontSize: "24px",
-                color: "#000",
-                borderRadius: "50%",
-                cursor: "pointer",
-            }}
-        >
-            &#60;
-        </div>
-    );
-
-    const CustomNextArrow = props => (
-        <div
-            onClick={props.onClick}
-            style={{
-                ...props.style,
-                display: "block",
-                position: "absolute",
-                right: "0px",
-                top: "50%",
-                transform: "translateY(-50%)",
-                fontSize: "24px",
-                color: "#000",
-                borderRadius: "50%",
-                cursor: "pointer",
-            }}
-        >
-            &#62;
-        </div>
-    );
-
-    const sliderSettings = {
-        accessibility: true,
-        dots: true,
-        fade: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        prevArrow: <CustomPrevArrow />,
-        nextArrow: <CustomNextArrow />,
-        autoplaySpeed: 3000,
-        adaptiveHeight: true,
-    };
-
     return (
-        <div className="container mt-4 h-40" style={{ fontFamily: 'monospace' }}>
-            <div style={{ minHeight: '200px', maxHeight: '300px' }}>
-                <h3 style={{ fontVariant: 'small-caps', textAlign: 'center', fontWeight: 'bold' }}>
-                    Testimonials</h3>
+        <div className="w-full px-4 py-6 font-mono">
+            <div className="bg-gray-200 rounded-lg p-2 sm:px-10 min-h-[200px] max-h-[320px] md:mx-20">
+                <h3 className="text-center font-bold text-xl uppercase p-2 pt-4">Testimonials</h3>
                 {reviews.length > 0 ? (
                     <Slider {...sliderSettings}>
                         {reviews.map((review, index) => (
-                            <div className='px-4 text-center' key={index}>
-                                <div style={{ display: 'flex', justifyContent: 'space-around', margin: '0' }}>
-                                    <h3 className='m-0'>{review.name}</h3>
-                                    <p>{Array.from({ length: review.rating }, (_, index) => <span key={index}>⭐</span>)}</p>
+                            <div key={index} className="bg-white shadow-lg rounded-lg py-4 sm:px-4 text-center">
+                                <div className="flex justify-evenly items-center">
+                                    <div className="flex flex-col items-center mb-2">
+                                        <h3 className="sm:text-lg font-semibold m-0">{review.name}</h3>
+                                        <p className="text-xs sm:text-sm text-gray-600 italic">{review.profession}</p>
+                                    </div>
+                                    <p>
+                                        {Array.from({ length: review.rating }, (_, i) => (
+                                            <span key={i} className='text-sm'>⭐</span>
+                                        ))}
+                                    </p>
                                 </div>
-                                <p style={{ fontFamily: 'cursive', fontWeight: 'bold', margin: '5px' }}>{review.reviewText}</p>
+                                <p className="font-cursive font-bold mx-auto max-w-2xl px-2 text-xs sm:text-lg">{review.reviewText}</p>
                             </div>
                         ))}
                     </Slider>
                 ) : (
-                    <p>No reviews yet.</p>
+                    <p className="text-center">No reviews yet.</p>
                 )}
             </div>
-            <div className='row m-3'>
-                <h3 style={{ fontVariant: 'small-caps', textAlign: 'center', fontWeight: 'bold', marginTop: '8px' }}>
-                    Awards and Appreciation</h3>
+
+            <div className="mt-8 md:mx-20">
+                <h3 className="text-center font-bold text-xl uppercase mb-4">Awards and Appreciation</h3>
                 <Slider {...sliderSettings}>
-                    <div>
-                        <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <img src={process.env.PUBLIC_URL + '/images/award1.jpg'}
-                                style={{ width: '90%', maxWidth: '900px', height: 'auto', maxHeight: '65vh', minHeight: '200px' }} alt='Appreciation' />
+                    {[
+                        '/images/award1.jpg',
+                        '/images/LIC T.jpg',
+                        '/images/Star Health T.jpg',
+                        '/images/star health c.jpg',
+                        '/images/Mutual Fund c.jpg'
+                    ].map((src, i) => (
+                        <div>
+                            <div key={i} className="flex justify-center">
+                                <img
+                                    src={process.env.PUBLIC_URL + src}
+                                    alt="Appreciation"
+                                    className="w-[90%] max-w-[900px] h-auto max-h-[65vh] min-h-[200px] object-contain rounded-lg"
+                                />
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <img src={process.env.PUBLIC_URL + '/images/LIC T.jpg'}
-                                style={{ width: '90%', maxWidth: '900px', height: 'auto', maxHeight: '65vh', minHeight: '200px' }} alt='Appreciation' />
-                        </div>
-                    </div>
-                    <div>
-                        <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <img src={process.env.PUBLIC_URL + '/images/Star Health T.jpg'}
-                                style={{ width: '90%', maxWidth: '900px', height: 'auto', maxHeight: '65vh', minHeight: '200px' }} alt='Appreciation' />
-                        </div>
-                    </div>
-                    <div>
-                        <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <img src={process.env.PUBLIC_URL + '/images/star health c.jpg'}
-                                style={{ width: '90%', maxWidth: '900px', height: 'auto', maxHeight: '65vh', minHeight: '200px' }} alt='Appreciation' />
-                        </div>
-                    </div>
-                    <div>
-                        <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <img src={process.env.PUBLIC_URL + '/images/Mutual Fund c.jpg'}
-                                style={{ width: '90%', maxWidth: '900px', height: 'auto', maxHeight: '65vh', minHeight: '200px' }} alt='Appreciation' />
-                        </div>
-                    </div>
+                    ))}
                 </Slider>
             </div>
         </div>

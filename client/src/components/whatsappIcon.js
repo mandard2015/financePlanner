@@ -1,41 +1,32 @@
-// WhatsAppIcon.js
-
 import React from 'react';
 import { FaWhatsapp, FaPhone } from 'react-icons/fa';
 
 const WhatsAppIcon = () => {
+  const phoneNumber = '9011094170';
+
   const openWhatsApp = () => {
-    // Replace '1234567890' with the actual WhatsApp number
-    const phoneNumber = '9011094170';
     window.open(`https://wa.me/${phoneNumber}`, '_blank');
   };
 
   const openDialer = () => {
-    const phoneNumber = '9011094170';
-    window.location.href = `tel:${phoneNumber}`
+    window.location.href = `tel:${phoneNumber}`;
   };
 
   return (
-    <div
-      style={{
-        position: 'fixed', bottom: '20px', right: '20px', display: 'flex', flexDirection: 'column',
-      }}>
-      <div style={{
-        backgroundColor: '#25d366', color: '#fff', borderRadius: '50%', padding: '10px',
-        marginBottom: '10px', cursor: 'pointer', display: 'flex', alignItems: 'center',
-        justifyContent: 'center', fontSize: '20px', boxShadow: '0 0 15px rgba(7, 180, 0)',
-        zIndex: '1000'
-      }}
-        onClick={openWhatsApp}>
+    <div className="fixed bottom-5 right-5 flex flex-col z-50">
+      {/* WhatsApp Button */}
+      <div
+        onClick={openWhatsApp}
+        className="bg-[#25d366] text-white rounded-full p-3 mb-3 cursor-pointer shadow-[0_0_15px_rgba(7,180,0)] flex items-center justify-center text-lg"
+      >
         <FaWhatsapp size={30} />
       </div>
-      <div style={{
-        backgroundColor: '#25d366', color: '#fff', borderRadius: '50%', padding: '10px',
-        marginBottom: '10px', cursor: 'pointer', display: 'flex', alignItems: 'center',
-        justifyContent: 'center', fontSize: '20px', boxShadow: '0 0 15px rgba(7, 180, 0)',
-        zIndex: '1000'
-      }}
-        onClick={openDialer}>
+
+      {/* Call Button */}
+      <div
+        onClick={openDialer}
+        className="bg-[#25d366] text-white rounded-full p-3 mb-3 cursor-pointer shadow-[0_0_15px_rgba(7,180,0)] flex items-center justify-center text-lg"
+      >
         <FaPhone size={30} />
       </div>
     </div>

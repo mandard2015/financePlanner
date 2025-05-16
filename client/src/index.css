@@ -1,4 +1,7 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,54 +13,29 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+.values-slider .slick-prev,
+.values-slider .slick-next {
+  width: 25px;
+  height: 25px;
+  z-index: 1;
 }
 
-/* Add these styles to your CSS file */
-
-.toggle-cards-wrapper {
-  text-align: center;
-  margin-bottom: 15px;
+.values-slider .slick-prev:before,
+.values-slider .slick-next:before {
+  font-size: 25px;
+  color: white;
 }
 
-.toggle-cards {
-  display: inline-block;
-  cursor: pointer;
+.values-slider .slick-prev {
+  left: 10px;
 }
 
-.arrow-icon {
-  font-size: 24px;
-  box-shadow: 0 0 10px rgba(rgb(23, 23, 211));
-  transition: transform 0.3s ease, color 0.3s ease;
+.values-slider .slick-next {
+  right: 10px;
 }
 
-.arrow-icon:hover {
-  color: #0056b3;
-}
-
-.hidden {
+.values-slider .slick-dots {
   display: none;
-}
-
-.toggle-cards.open {
-  transform: translateY(-50px);
-}
-
-.toggle-cards.open {
-  transform: rotate(180deg);
-}
-
-.card_shod {
-  display: none; /* Hide the cards initially */
-  animation: slideIn 0.5s ease forwards;
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
