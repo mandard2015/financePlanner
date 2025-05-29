@@ -12,7 +12,7 @@ const reviews = [
     },
     {
         id: 2, name: "M M. Dhamane",
-        profession: "Government Officer", rating: 4, reviewText: "Any time helpful."
+        profession: "Manager", rating: 4, reviewText: "Any time helpful."
     },
     {
         id: 3, name: "Ashish Sharma",
@@ -20,7 +20,7 @@ const reviews = [
     },
     {
         id: 4, name: "Balasaheb Chavan",
-        profession: "Retired Teacher", rating: 5, reviewText: "Good advised"
+        profession: "sr. Software Engineer", rating: 5, reviewText: "Good advised"
     },
     {
         id: 5, name: "Arvind Bhosale",
@@ -28,7 +28,7 @@ const reviews = [
     },
     {
         id: 6, name: "Usha",
-        profession: "Doctor", rating: 5, reviewText: "समर्पण"
+        profession: "Homemaker", rating: 5, reviewText: "समर्पण"
     }
 ];
 
