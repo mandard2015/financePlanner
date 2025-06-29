@@ -39,7 +39,7 @@ const AppNavbar = () => {
             className="text-lg sm:text-xl font-semibold text-gray-800 cursor-pointer hover:opacity-80 transition"
             style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.5)" }}
           >
-            Shree Investments and Financial Solutions
+            Anand Investments and Financial Solutions
           </div>
 
           {/* Desktop Menu */}
