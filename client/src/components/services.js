@@ -70,7 +70,7 @@ const ServiceSlider = () => {
                             />
                             <h5 className="text-lg font-semibold">Mr. Anand Deshmukh</h5>
                         </div>
-                        <div id="about" className="md:w-2/3 flex flex-col justify-center space-y-4 pr-4 text-justify">
+                        <div id="about" className="scroll-mt-24 md:w-2/3 flex flex-col justify-center space-y-4 pr-4 text-justify">
                             <h3 className="text-2xl font-semibold">Greetings and welcome to my website!</h3>
                             <p>Allow me to introduce myself - I am Anand Deshmukh, and I am dedicated to providing transparent and reliable
                                 assistance tailored to meet your needs. As you navigate through the various fields I specialize in, you'll

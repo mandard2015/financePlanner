@@ -101,7 +101,7 @@ const WorkExp = () => {
     const current = services.find(s => s.key === active);
 
     return (
-        <section id='product' className="px-8 py-8">
+        <section id='product' className="scroll-mt-24 px-8 py-8">
             <style>{keyframes}</style>
 
             {/* Title */}
@@ -174,7 +174,7 @@ const WorkExp = () => {
                         <h4 className="mt-1">POLICIES</h4>
                     </div>
                     <div>
-                        <h3 id="reviews" className="text-3xl font-bold"><CountUp end={65} duration={4} />+</h3>
+                        <h3 className="text-3xl font-bold"><CountUp end={65} duration={4} />+</h3>
                         <h4 className="mt-1">TEAM</h4>
                     </div>
                 </div>

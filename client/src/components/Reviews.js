@@ -58,7 +58,7 @@ const sliderSettings = {
 
 const Reviews = () => {
     return (
-        <div className="w-full px-4 py-6 font-mono">
+        <div id="reviews" className="w-full scroll-mt-24 px-4 py-6 font-mono">
             <div className="bg-gray-200 rounded-lg p-2 sm:px-10 min-h-[200px] max-h-[320px] md:mx-20">
                 <h3 className="text-center font-bold text-xl uppercase p-2 pt-4">Testimonials</h3>
                 {reviews.length > 0 ? (
