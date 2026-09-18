@@ -101,81 +101,82 @@ const WorkExp = () => {
     const current = services.find(s => s.key === active);
 
     return (
-        <section id='product' className="scroll-mt-24 px-8 py-8">
+        <section id='product' className="scroll-mt-24 py-14">
             <style>{keyframes}</style>
+            <div className="container-shell">
+                <div className="mb-8 text-center">
+                    <p className="section-label">Our services</p>
+                    <h2 className="section-heading">Insurance and financial guidance</h2>
+                </div>
 
-            {/* Title */}
-            <h3 className="text-center font-mono font-bold uppercase mb-6">Our Services</h3>
+                <div className="mb-8 flex flex-wrap justify-center gap-3">
+                    {services.map(s => (
+                        <button
+                            key={s.key}
+                            onClick={() => setActive(s.key)}
+                            className={`rounded-xl px-4 py-2.5 text-sm font-semibold transition ${active === s.key ? 'bg-brand-700 text-white shadow-soft' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'}`}
+                        >
+                            {s.title}
+                        </button>
+                    ))}
+                </div>
 
-            {/* Tabs */}
-            <div className="flex justify-center space-x-1 md:space-x-4 mb-8">
-                {services.map(s => (
-                    <button
-                        key={s.key}
-                        onClick={() => setActive(s.key)}
-                        className={`px-4 py-2 font-medium rounded ${active === s.key ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}
-                    >
-                        {s.title}
-                    </button>
-                ))}
-            </div>
-
-            {/* Content */}
-            <div className="max-w-5xl mx-auto space-y-6">
-                <h3 className="text-2xl font-semibold">{current.heading}</h3>
-                <div className="flex flex-col md:flex-row items-center gap-6">
-                    <div className="md:w-2/3 space-y-4">
-                        {current.description.map((p, i) => (
-                            <p key={i} className="text-gray-700">{p}</p>
-                        ))}
-                        <ul className="list-disc list-inside space-y-1">
-                            {current.items.map((item, i) => (<li key={i}>{item}</li>))}
-                        </ul>
+                <div className="card-surface overflow-hidden bg-white p-6 sm:p-8">
+                    <div className="mb-6 flex items-center justify-between gap-4 border-b border-slate-200 pb-5">
+                        <h3 className="text-2xl font-bold text-slate-900">{current.heading}</h3>
                     </div>
-                    <div className="md:w-1/3 text-center">
-                        <img
-                            src={process.env.PUBLIC_URL + current.image}
-                            alt={current.heading}
-                            className="w-4/5 max-h-72 rounded-xl shadow-lg object-cover mx-auto"
-                        />
+                    <div className="grid gap-8 md:grid-cols-[1.6fr,0.9fr] md:items-center">
+                        <div className="space-y-4 text-slate-600">
+                            {current.description.map((p, i) => (
+                                <p key={i}>{p}</p>
+                            ))}
+                            <ul className="list-disc space-y-2 pl-5 text-slate-700">
+                                {current.items.map((item, i) => (<li key={i}>{item}</li>))}
+                            </ul>
+                            <p className="font-semibold text-slate-800">{current.call}</p>
+                        </div>
+                        <div className="text-center">
+                            <img
+                                src={process.env.PUBLIC_URL + current.image}
+                                alt={current.heading}
+                                className="mx-auto h-64 w-full max-w-[280px] rounded-2xl object-cover shadow-soft"
+                            />
+                        </div>
                     </div>
                 </div>
-                <p className="font-semibold">{current.call}</p>
             </div>
 
-            {/* Marquee Logos */}
-            <div className="overflow-hidden my-12 md:mx-20">
+            <div className="mt-16 overflow-hidden bg-slate-100 py-8">
                 <div className="flex whitespace-nowrap animate-[marquee_20s_linear_infinite]">
                     {logos.concat(logos).concat(logos).map((logo, idx) => (
-                        <div key={idx} className="mx-6 flex-shrink-0 w-36">
+                        <div key={idx} className="mx-6 w-36 flex-shrink-0">
                             <img
                                 src={process.env.PUBLIC_URL + logo.imageUrl}
                                 alt={logo.name}
-                                className="w-full h-28 object-contain"
+                                className="h-28 w-full object-contain"
                             />
                         </div>
                     ))}
                 </div>
             </div>
 
-            {/* Counters */}
-            <div className="bg-gradient-to-br from-blue-400 to-pink-500 text-white py-12 md:mx-20">
-                <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div className="mt-14 bg-gradient-to-r from-brand-700 to-brand-900 py-12 text-white">
+                <div className="container-shell grid grid-cols-2 gap-8 text-center md:grid-cols-4">
                     <div>
                         <h3 className="text-3xl font-bold"><CountUp end={19} duration={4} />+</h3>
-                        <h4 className="mt-1">YEARS</h4>
+                        <h4 className="mt-1 text-sm uppercase tracking-[0.12em] text-brand-100">Years</h4>
                     </div>
                     <div>
                         <h3 className="text-3xl font-bold"><CountUp end={2000} duration={4} />+</h3>
-                        <h4 className="mt-1">FAMILIES</h4>
+                        <h4 className="mt-1 text-sm uppercase tracking-[0.12em] text-brand-100">Families</h4>
                     </div>
                     <div>
                         <h3 className="text-3xl font-bold"><CountUp end={5000} duration={4} />+</h3>
-                        <h4 className="mt-1">POLICIES</h4>
+                        <h4 className="mt-1 text-sm uppercase tracking-[0.12em] text-brand-100">Policies</h4>
                     </div>
                     <div>
                         <h3 className="text-3xl font-bold"><CountUp end={65} duration={4} />+</h3>
-                        <h4 className="mt-1">TEAM</h4>
+                        <h4 className="mt-1 text-sm uppercase tracking-[0.12em] text-brand-100">Team</h4>
                     </div>
                 </div>
             </div>

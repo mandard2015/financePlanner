@@ -1,19 +1,85 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+:root {
+  --brand-50: #f4f9ff;
+  --brand-100: #eaf4ff;
+  --brand-200: #d7eaff;
+  --brand-300: #b8d9ff;
+  --brand-400: #89bdfd;
+  --brand-500: #5a9df5;
+  --brand-600: #3b7ee0;
+  --brand-700: #2e63b2;
+  --brand-800: #2b4f8b;
+  --brand-900: #243f6e;
+  --slate-950: #0f172a;
+  --surface: #ffffff;
+  --surface-alt: #f8fafc;
+  --muted: #475569;
+  --border: rgba(15, 23, 42, 0.08);
+  --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.08);
+  --shadow-card: 0 10px 24px rgba(15, 23, 42, 0.1);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-800 antialiased;
+    font-family: Inter, 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-shell {
+    @apply container-shell py-14 sm:py-18;
+  }
+
+  .section-heading {
+    @apply text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl;
+  }
+
+  .section-label {
+    @apply mb-3 inline-flex items-center rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-brand-700;
+  }
+
+  .card-surface {
+    @apply rounded-2xl border border-slate-200 bg-white shadow-soft;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-brand-700 text-white hover:bg-brand-800 shadow-soft;
+  }
+
+  .btn-secondary {
+    @apply btn border border-slate-200 bg-white text-slate-700 hover:border-brand-300 hover:text-brand-700;
+  }
+
+  .btn-ghost {
+    @apply btn bg-transparent text-brand-700 hover:bg-brand-50;
+  }
+}
 
 .values-slider .slick-prev,
 .values-slider .slick-next {
@@ -38,4 +104,10 @@ code {
 
 .values-slider .slick-dots {
   display: none;
+}
+
+@media (max-width: 640px) {
+  .card-surface {
+    @apply rounded-xl;
+  }
 }

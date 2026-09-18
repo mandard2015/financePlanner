@@ -1,8 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders the Life Insurance route content for nested browser URLs', () => {
+  window.history.pushState({}, '', '/services/life-insurance');
+
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  expect(screen.getByRole('heading', { name: /Life Insurance \/ LIC/i })).toBeInTheDocument();
 });

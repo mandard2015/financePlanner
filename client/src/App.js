@@ -1,31 +1,42 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import AppNavbar from './components/navbar';
-import ServiceSlider from './components/services';
-import Reviews from './components/Reviews';
-import WhatsAppIcon from './components/whatsappIcon';
-import Footer from './components/footer';
-import WorkExp from './components/areaWorkExp';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './layout/Layout';
+import Home from './pages/Home';
+import About from './pages/About';
+import Services from './pages/Services';
+import LifeInsurance from './pages/LifeInsurance';
+import HealthInsurance from './pages/HealthInsurance';
+import GeneralInsurance from './pages/GeneralInsurance';
+import MutualFunds from './pages/MutualFunds';
+import ReviewsPage from './pages/Reviews';
+import Awards from './pages/Awards';
+import Blogs from './pages/Blogs';
+import Recommendations from './pages/Recommendations';
+import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
-    <Router>
-    <div className="App">
-      <AppNavbar />
+    <BrowserRouter>
       <Routes>
-        <Route path='/' element={<ServiceSlider />} />
-        <Route path='/about' element={<WorkExp />} />
-        <Route path='/reviews' element={<Reviews />} />
-        <Route path='/contactUs' element={<Footer />} />
+        <Route element={<Layout />}>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/services' element={<Services />} />
+          <Route path='/services/life-insurance' element={<LifeInsurance />} />
+          <Route path='/services/health-insurance' element={<HealthInsurance />} />
+          <Route path='/services/general-insurance' element={<GeneralInsurance />} />
+          <Route path='/services/mutual-funds' element={<MutualFunds />} />
+          <Route path='/reviews' element={<ReviewsPage />} />
+          <Route path='/awards' element={<Awards />} />
+          <Route path='/blogs' element={<Blogs />} />
+          <Route path='/recommendations' element={<Recommendations />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='*' element={<NotFound />} />
+        </Route>
       </Routes>
-      {/* </div> */}
-      <WorkExp />
-      <Reviews />
-      <Footer />
-      <WhatsAppIcon />
-    </div>
-    </Router>
+    </BrowserRouter>
   );
-};
+}
 
 export default App;
