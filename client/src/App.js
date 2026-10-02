@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import SEO from './SEO';
 import Layout from './layout/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -18,6 +19,7 @@ import NotFound from './pages/NotFound';
 function App() {
   return (
     <BrowserRouter>
+      <SEO />
       <Routes>
         <Route element={<Layout />}>
           <Route path='/' element={<Home />} />

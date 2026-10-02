@@ -1,0 +1,105 @@
+const servicesData = {
+  lifeInsurance: {
+    category: 'Protection and planning',
+    title: 'Life Insurance / LIC',
+    subtitle: 'Life protection and long-term planning for the people and responsibilities that matter to you.',
+    overview: 'Life insurance can be considered as part of a family protection and long-term financial plan. The right conversation starts with understanding your responsibilities, priorities and the kind of support your family may need.',
+    image: '/images/lifeinsurance.jpg',
+    relevantFor: [
+      'Individuals with family responsibilities',
+      'Parents thinking about children’s future goals',
+      'People reviewing their family’s financial safety net',
+      'Anyone who wants to understand life protection options',
+    ],
+    supportAreas: [
+      'Understanding your protection needs',
+      'Discussing policy options in clear language',
+      'Connecting protection with long-term goals',
+      'Claims assistance and ongoing plan reviews',
+    ],
+    categories: ['Life protection', 'Family financial security', 'Children’s future planning', 'Retirement and long-term planning'],
+    faqs: [
+      'What responsibilities should be considered when reviewing life protection?',
+      'How can life insurance fit into a wider financial plan?',
+      'What information is useful before a consultation?',
+    ],
+  },
+  healthInsurance: {
+    category: 'Health and risk protection',
+    title: 'Health Insurance / Mediclaim',
+    subtitle: 'Understand health-risk protection and medical-expense planning for yourself and your family.',
+    overview: 'Health insurance conversations are about preparing for medical expenses and understanding the protection that may be relevant to your circumstances. Anand can help you compare the important considerations in a clear, practical way.',
+    image: '/images/healthinsurance.jpg',
+    relevantFor: [
+      'Individuals reviewing their medical-expense protection',
+      'Families considering health coverage',
+      'People planning for changing healthcare responsibilities',
+      'Anyone who wants help understanding mediclaim options',
+    ],
+    supportAreas: [
+      'Discussing health-risk and coverage needs',
+      'Explaining policy features and exclusions',
+      'Considering individual or family requirements',
+      'Support with questions and claims processes',
+    ],
+    categories: ['Individual health cover', 'Family health cover', 'Hospitalisation planning', 'Mediclaim review'],
+    faqs: [
+      'What health and family details should be considered first?',
+      'Which policy terms are important to understand?',
+      'How can existing health coverage be reviewed?',
+    ],
+  },
+  generalInsurance: {
+    category: 'Everyday risk protection',
+    title: 'General Insurance',
+    subtitle: 'Explore protection for relevant vehicle, property, travel and other everyday risks.',
+    overview: 'General insurance helps address risks connected to assets, travel and everyday responsibilities. The focus is on identifying the areas that matter to you and understanding the cover available for those needs.',
+    image: '/images/geninsurance.jpg',
+    relevantFor: [
+      'Vehicle owners reviewing motor protection',
+      'Families considering household or property risks',
+      'Business owners with relevant asset responsibilities',
+      'People planning cover for travel or personal accident risks',
+    ],
+    supportAreas: [
+      'Identifying relevant general-insurance requirements',
+      'Discussing policy scope and important conditions',
+      'Reviewing protection as circumstances change',
+      'Helping with documentation and claims questions',
+    ],
+    categories: ['Motor insurance', 'Household and property protection', 'Personal accident', 'Travel and business-related risks'],
+    faqs: [
+      'Which everyday risks should be reviewed first?',
+      'What information is needed to discuss a general-insurance requirement?',
+      'How often should existing protection be reviewed?',
+    ],
+  },
+  mutualFunds: {
+    category: 'Investments and goal planning',
+    title: 'Mutual Funds & Investments',
+    subtitle: 'Consider goal-oriented investing with a clear understanding of objectives, time horizon and market risk.',
+    overview: 'Mutual funds can be one part of a broader financial plan. Conversations should connect investment choices with your objectives and comfort with risk rather than focusing on promised outcomes or returns.',
+    image: '/images/mutualfund.jpg',
+    relevantFor: [
+      'Individuals beginning to think about long-term investing',
+      'Families connecting investments with future goals',
+      'People reviewing their investment approach and time horizon',
+      'Anyone who wants to understand mutual-fund categories',
+    ],
+    supportAreas: [
+      'Clarifying objectives and investment time horizon',
+      'Discussing risk and relevant fund categories',
+      'Connecting investments with financial goals',
+      'Regular reviews as needs and circumstances change',
+    ],
+    categories: ['Equity funds', 'Debt funds', 'Hybrid funds', 'Tax-saving and liquid funds'],
+    faqs: [
+      'What goal and time horizon should be discussed before investing?',
+      'How should market risk be understood?',
+      'Why can regular reviews be useful for an investment plan?',
+    ],
+    disclaimer: 'Mutual fund investments are subject to market risks. Read all scheme-related documents carefully.',
+  },
+};
+
+export default servicesData;

@@ -6,5 +6,5 @@ test('renders the Life Insurance route content for nested browser URLs', () => {
 
   render(<App />);
 
-  expect(screen.getByRole('heading', { name: /Life Insurance \/ LIC/i })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { level: 1, name: /Life Insurance \/ LIC/i })).toBeInTheDocument();
 });
