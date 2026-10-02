@@ -1,5 +1,6 @@
 const servicesData = {
   lifeInsurance: {
+    slug: 'life-insurance',
     category: 'Protection and planning',
     title: 'Life Insurance / LIC',
     subtitle: 'Life protection and long-term planning for the people and responsibilities that matter to you.',
@@ -25,6 +26,7 @@ const servicesData = {
     ],
   },
   healthInsurance: {
+    slug: 'health-insurance',
     category: 'Health and risk protection',
     title: 'Health Insurance / Mediclaim',
     subtitle: 'Understand health-risk protection and medical-expense planning for yourself and your family.',
@@ -50,6 +52,7 @@ const servicesData = {
     ],
   },
   generalInsurance: {
+    slug: 'general-insurance',
     category: 'Everyday risk protection',
     title: 'General Insurance',
     subtitle: 'Explore protection for relevant vehicle, property, travel and other everyday risks.',
@@ -75,6 +78,7 @@ const servicesData = {
     ],
   },
   mutualFunds: {
+    slug: 'mutual-funds',
     category: 'Investments and goal planning',
     title: 'Mutual Funds & Investments',
     subtitle: 'Consider goal-oriented investing with a clear understanding of objectives, time horizon and market risk.',

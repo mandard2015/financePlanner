@@ -80,11 +80,11 @@ const ServiceSlider = () => {
                         </div>
                         <div id="about" className="scroll-mt-24 space-y-4 text-slate-600">
                             <p className="section-label">About the advisor</p>
-                            <h2 className="section-heading">Greetings and welcome to my website!</h2>
-                            <p>Allow me to introduce myself - I am Anand Deshmukh, and I am dedicated to providing transparent and reliable assistance tailored to meet your needs. As you navigate through the various fields I specialize in, you'll discover a commitment to transparency that forms the very core of my identity.</p>
-                            <p>At the heart of my mission is a focus on shaping your future. I am here to empower you with a precise investment strategy that perfectly aligns with your goals. Trust me to turn your aspirations into tangible achievements, granting you the ultimate in financial independence. Over the years, I've had the privilege of guiding more than 2000 individuals and families towards complete financial freedom, showcasing my expertise in navigating the complexities of financial planning and investments.</p>
-                            <p>Within our Advisory Services, I've fine-tuned the process to simplify complexities, ensuring you feel at ease as you chart your course towards financial prosperity. Your satisfaction is my topmost concern, and priority is always given to your needs. With me, rest assured that your financial well-being is my paramount focus. Feel free to explore the comprehensive range of insurance products and services I offer, all designed to meet your diverse needs.</p>
-                            <p>Thank you for visiting, and I look forward to assisting you on your journey to financial success!</p>
+                            <h2 className="section-heading">A practical and transparent approach to financial guidance</h2>
+                            <p>Allow me to introduce myself - I am Anand Deshmukh, and I am dedicated to providing clear, reliable guidance tailored to your specific needs. As you explore the areas I serve, you will find a focus on helpful explanations, thoughtful planning and informed discussions.</p>
+                            <p>My approach is centred on understanding your goals, responsibilities and financial priorities before discussing suitable options. The aim is to simplify important decisions and help you evaluate insurance, protection and investment choices in a more informed manner.</p>
+                            <p>The advisory process is built around clarity, responsiveness and ongoing support. Whether the conversation concerns family protection, health cover, general insurance or investment planning, the focus remains on practical guidance and a transparent decision-making process.</p>
+                            <p>Thank you for visiting, and I look forward to supporting you with thoughtful, relevant guidance as you consider your financial priorities.</p>
                         </div>
                     </div>
 

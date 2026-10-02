@@ -22,7 +22,7 @@ const ServiceDetailPage = ({ service, extraSections = [] }) => {
             <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">{service.title}</h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">{service.subtitle}</p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/contact" className="btn btn-primary">Discuss your needs</Link>
+              <Link to={`/contact?service=${service.slug || 'general-enquiry'}`} className="btn btn-primary">Discuss your needs</Link>
               <Link to="/services" className="btn border border-white/30 bg-white/10 text-white hover:bg-white/20 hover:text-white">Back to services</Link>
             </div>
           </div>

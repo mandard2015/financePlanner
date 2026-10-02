@@ -136,6 +136,39 @@ const routeMetadata = {
     ogType: 'website',
     twitterCard: 'summary',
   },
+  '/privacy-policy': {
+    title: 'Privacy Policy | Anand Deshmukh',
+    description:
+      'Privacy information for website visitors, enquiries and analytics usage on the Anand Deshmukh financial and insurance advisory website.',
+    canonical: `${SITE_URL}/privacy-policy`,
+    ogTitle: 'Privacy Policy',
+    ogDescription:
+      'Plain-language privacy information for website visitors and enquiry correspondence.',
+    ogType: 'website',
+    twitterCard: 'summary',
+  },
+  '/terms': {
+    title: 'Terms of Use | Anand Deshmukh',
+    description:
+      'Website terms covering general informational content, product information and the role of the Anand Deshmukh advisory website.',
+    canonical: `${SITE_URL}/terms`,
+    ogTitle: 'Terms of Use',
+    ogDescription:
+      'General website terms and information for visitors to the Anand Deshmukh advisory website.',
+    ogType: 'website',
+    twitterCard: 'summary',
+  },
+  '/disclaimer': {
+    title: 'Financial & Insurance Disclaimer | Anand Deshmukh',
+    description:
+      'Important financial and insurance disclaimer information covering general planning guidance, product terms and market risk disclosures.',
+    canonical: `${SITE_URL}/disclaimer`,
+    ogTitle: 'Financial & Insurance Disclaimer',
+    ogDescription:
+      'General educational disclaimer covering insurance, investments and financial guidance on the Anand Deshmukh website.',
+    ogType: 'website',
+    twitterCard: 'summary',
+  },
   default: {
     title: 'Anand Deshmukh | Financial & Insurance Advisor',
     description:

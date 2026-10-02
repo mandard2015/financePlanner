@@ -72,10 +72,10 @@ const Home = () => {
             </div>
             <div className="mt-10 grid max-w-xl grid-cols-2 gap-4 border-t border-white/15 pt-6 sm:grid-cols-4">
               {[
-                ['19+', 'years'],
-                ['2,000+', 'families'],
-                ['5,000+', 'policies'],
-                ['65+', 'team'],
+                ['19+', 'Years of Experience'],
+                ['2,000+', 'Families'],
+                ['5,000+', 'Policies'],
+                ['65+', 'Team'],
               ].map(([value, label]) => (
                 <div key={label}>
                   <p className="text-2xl font-bold text-white">{value}</p>

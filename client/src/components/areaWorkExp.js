@@ -21,18 +21,18 @@ const services = [
         heading: 'LIC - Life Insurance Corporation of India',
         image: '/images/lictab.jpg',
         items: [
-            'Term Insurance refund of Premium',
-            'Guaranteed tax-free Life time Money Back',
-            'Pension For Lifetime',
-            'Children Education Provision',
-            'Daughter Marriage Provision',
-            'Jeevan Labh',
+            'Term insurance comparisons',
+            'Long-term family protection planning',
+            'Education and milestone planning conversations',
+            'Retirement and lifestyle planning discussions',
+            'Policy features and terms review',
+            'Insurance planning relevance assessment',
         ],
         description: [
-            'LIC is a leading life insurance provider with a legacy of trust and reliability. Our diverse range of insurance products ensures financial security for you and your family. From traditional life insurance plans to investment-linked policies, LIC has something for everyone.',
-            'Explore our products and secure your future with LIC. Contact us today for personalized advice and the best insurance solutions for your needs.',
+            'Life insurance plans may serve different needs depending on your responsibilities, income profile and long-term goals. Product details, features, premiums and exclusions vary by insurer and policy type.',
+            'A practical discussion starts with understanding your situation and the protection objectives you want to address before comparing policy options.',
         ],
-        call: 'Ready to safeguard your future? Call us at 9011094170 to get started.',
+        call: 'Discuss your life insurance priorities with Anand Deshmukh.',
     },
     {
         key: 'starHealth',
@@ -40,18 +40,18 @@ const services = [
         heading: 'Star Health',
         image: '/images/health tab.jpg',
         items: [
-            'Arogya Sanjeevani',
-            'Young Star Insurance Policy',
-            'Family Accident Care Insurance Policy',
-            'Star Super Surplus Insurance Policy',
-            'Senior Citizens Red Carpet Health Insurance Policy',
-            'Medi Classic Insurance Policy (Individual)',
+            'Individual and family health cover discussions',
+            'Hospitalisation and medical-expense planning',
+            'Policy features and exclusions review',
+            'Waiting periods and network considerations',
+            'Age and health profile discussions',
+            'Ongoing cover review support',
         ],
         description: [
-            'Star Health is a leading health insurance provider committed to ensuring your well-being. Our comprehensive health insurance plans cover medical expenses, hospitalization, and more. With a focus on customer-centric solutions, Star Health strives to provide the best healthcare coverage.',
-            'Discover the benefits of our health insurance plans and prioritize your health. Connect with us today for expert advice and a personalized health insurance plan.',
+            'Health insurance choices typically depend on your medical history, family needs, budget and the level of coverage you want to plan for. Policy terms, exclusions and eligibility can vary significantly.',
+            'The goal is to understand your healthcare priorities clearly and discuss suitable options in a practical, informed way.',
         ],
-        call: 'Take the first step towards a healthier life. Call us at 9011094170 for more details.',
+        call: 'Discuss your health insurance requirements with Anand Deshmukh.',
     },
     {
         key: 'generalInsurance',
@@ -59,19 +59,18 @@ const services = [
         heading: 'New India Assurance',
         image: '/images/general tab.jpg',
         items: [
-            'Household Insurance',
-            'Car Insurance',
-            'Personal Accident Policy',
-            'WC Policy',
-            'Fire Policy',
-            'Mediclaim',
-            'Shopkeeper Policy',
+            'Motor and asset protection discussions',
+            'Property and household-risk conversations',
+            'Travel and personal accident considerations',
+            'Business and liability-related risk review',
+            'Policy terms, exclusions and claim conditions',
+            'Ongoing protection review support',
         ],
         description: [
-            'New India Assurance is a trusted general insurance provider known for its comprehensive range of insurance products. Our offerings include motor insurance, property insurance, travel insurance, and more. With a commitment to customer satisfaction, we provide tailored insurance solutions.',
-            'Protect your assets and secure your travels with New India Assurance. Contact us for expert guidance and reliable insurance coverage.',
+            'General insurance can cover non-life risks such as vehicles, property, travel and day-to-day obligations, depending on the situation. Coverage terms, exclusions and claim conditions vary by product and insurer.',
+            'A clearer review helps identify what risks are relevant and whether the protection structure still matches your current responsibilities.',
         ],
-        call: 'Safeguard what matters to you. Call us at 9011094170 to discuss your insurance needs.',
+        call: 'Discuss your general insurance requirements with Anand Deshmukh.',
     },
     {
         key: 'mutualFunds',
@@ -163,20 +162,20 @@ const WorkExp = () => {
             <div className="mt-14 bg-gradient-to-r from-brand-700 to-brand-900 py-12 text-white">
                 <div className="container-shell grid grid-cols-2 gap-8 text-center md:grid-cols-4">
                     <div>
-                        <h3 className="text-3xl font-bold"><CountUp end={19} duration={4} />+</h3>
-                        <h4 className="mt-1 text-sm uppercase tracking-[0.12em] text-brand-100">Years</h4>
+                        <h3 className="text-3xl font-bold">Guidance</h3>
+                        <h4 className="mt-1 text-sm uppercase tracking-[0.12em] text-brand-100">Planning</h4>
                     </div>
                     <div>
-                        <h3 className="text-3xl font-bold"><CountUp end={2000} duration={4} />+</h3>
-                        <h4 className="mt-1 text-sm uppercase tracking-[0.12em] text-brand-100">Families</h4>
+                        <h3 className="text-3xl font-bold">Protection</h3>
+                        <h4 className="mt-1 text-sm uppercase tracking-[0.12em] text-brand-100">Cover</h4>
                     </div>
                     <div>
-                        <h3 className="text-3xl font-bold"><CountUp end={5000} duration={4} />+</h3>
-                        <h4 className="mt-1 text-sm uppercase tracking-[0.12em] text-brand-100">Policies</h4>
+                        <h3 className="text-3xl font-bold">Review</h3>
+                        <h4 className="mt-1 text-sm uppercase tracking-[0.12em] text-brand-100">Options</h4>
                     </div>
                     <div>
-                        <h3 className="text-3xl font-bold"><CountUp end={65} duration={4} />+</h3>
-                        <h4 className="mt-1 text-sm uppercase tracking-[0.12em] text-brand-100">Team</h4>
+                        <h3 className="text-3xl font-bold">Support</h3>
+                        <h4 className="mt-1 text-sm uppercase tracking-[0.12em] text-brand-100">Clarity</h4>
                     </div>
                 </div>
             </div>

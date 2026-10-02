@@ -14,6 +14,9 @@ import Awards from './pages/Awards';
 import Blogs from './pages/Blogs';
 import Recommendations from './pages/Recommendations';
 import Contact from './pages/Contact';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import Terms from './pages/Terms';
+import Disclaimer from './pages/Disclaimer';
 import NotFound from './pages/NotFound';
 
 function App() {
@@ -34,6 +37,9 @@ function App() {
           <Route path='/blogs' element={<Blogs />} />
           <Route path='/recommendations' element={<Recommendations />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+          <Route path='/terms' element={<Terms />} />
+          <Route path='/disclaimer' element={<Disclaimer />} />
           <Route path='*' element={<NotFound />} />
         </Route>
       </Routes>
