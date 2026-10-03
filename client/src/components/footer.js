@@ -24,6 +24,7 @@ const Footer = () => {
                             <li><Link to="/blogs" className="hover:text-white">Blogs</Link></li>
                             <li><Link to="/recommendations" className="hover:text-white">Recommendations</Link></li>
                             <li><Link to="/contact" className="hover:text-white">Contact</Link></li>
+                            <li><a href="https://licindia.in/en/web/guest/premium-payment" target="_blank" rel="noreferrer" onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'lic_premium_click', { page: 'footer', source: 'quick_links' })} className="hover:text-white">Pay LIC Premium Online</a></li>
                             <li><Link to="/privacy-policy" className="hover:text-white">Privacy Policy</Link></li>
                             <li><Link to="/terms" className="hover:text-white">Terms</Link></li>
                             <li><Link to="/disclaimer" className="hover:text-white">Disclaimer</Link></li>

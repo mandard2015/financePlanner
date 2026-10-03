@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import Section from '../components/Section';
 import ServiceCard from '../components/ServiceCard';
 import CTASection from '../components/CTASection';
+import LogoMarquee from '../components/LogoMarquee';
+import AwardSlider from '../components/AwardSlider';
 
 const serviceCards = [
   {
@@ -59,6 +61,26 @@ const testimonials = [
 const Home = () => {
   return (
     <div>
+      <div className="border-b border-slate-200 bg-slate-950 text-white">
+        <div className="container-shell py-3">
+          <div className="flex flex-wrap items-center justify-center gap-3 text-sm text-slate-200 sm:text-base">
+            <span className="font-semibold text-brand-200">Quick Links</span>
+            <span className="hidden sm:inline text-slate-400">•</span>
+            <a
+              href="https://licindia.in/en/web/guest/premium-payment"
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'lic_premium_click', { page: 'home', source: 'quick_links' })}
+              className="font-medium text-white underline-offset-4 hover:text-brand-200 hover:underline"
+            >
+              Pay LIC Premium Online — Official LIC payment portal
+            </a>
+            <span className="hidden sm:inline text-slate-400">•</span>
+            <Link to="/contact" className="font-medium text-white underline-offset-4 hover:text-brand-200 hover:underline">Financial Planning Consultation</Link>
+          </div>
+        </div>
+      </div>
+
       <section className="relative overflow-hidden bg-slate-950 text-white">
         <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(15,23,42,0.97),rgba(36,63,110,0.82),rgba(15,23,42,0.3))]" />
         <div className="container-shell relative grid min-h-[620px] items-center gap-12 py-20 lg:grid-cols-[1.1fr,0.9fr] lg:py-24">
@@ -96,6 +118,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <LogoMarquee />
 
       <Section label="Meet your advisor" title="A practical approach to your financial needs" description="Anand Deshmukh helps clients understand their needs, consider suitable protection and connect financial decisions with the goals that matter to them.">
         <div className="mt-10 grid gap-8 md:grid-cols-[0.7fr,1.3fr] md:items-center">
@@ -177,6 +201,12 @@ const Home = () => {
           </div>
           <p className="mt-6 text-center text-xs text-slate-500">Mutual fund investments are subject to market risks. Read all scheme-related documents carefully.</p>
         </Section>
+      </section>
+
+      <section className="bg-white py-14">
+        <div className="container-shell">
+          <AwardSlider />
+        </div>
       </section>
 
       <Section label="Client experiences" title="Helpful guidance, remembered" description="A small selection of feedback from the existing client review collection.">

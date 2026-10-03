@@ -18,11 +18,11 @@ const routeMetadata = {
   '/about': {
     title: 'About Anand Deshmukh | Financial & Insurance Advisor',
     description:
-      'Learn about Anand Deshmukh, a financial and insurance advisor serving clients in Pimpri, Pune with practical guidance around protection, planning and investments.',
+      'Learn about Anand Deshmukh, a financial and insurance advisor in Pimpri, Pune offering practical guidance around financial planning, life insurance, health protection and investment conversations.',
     canonical: `${SITE_URL}/about`,
     ogTitle: 'About Anand Deshmukh',
     ogDescription:
-      'A practical, people-first approach to financial planning, insurance and long-term decision making.',
+      'A people-first approach to financial planning, insurance guidance and long-term decision-making for families and individuals.',
     ogType: 'website',
     twitterCard: 'summary',
   },
@@ -104,24 +104,24 @@ const routeMetadata = {
     twitterCard: 'summary',
   },
   '/blogs': {
-    title: 'Insights & Blogs | Anand Deshmukh',
+    title: 'Life Insurance Insights & Blog Articles | Anand Deshmukh',
     description:
-      'Educational insights on insurance, investments and financial planning from Anand Deshmukh in Pimpri, Pune.',
+      'Educational articles on life insurance, financial planning, protection and informed decision-making from Anand Deshmukh in Pimpri, Pune.',
     canonical: `${SITE_URL}/blogs`,
-    ogTitle: 'Insights & Blogs',
+    ogTitle: 'Life Insurance Insights & Blogs',
     ogDescription:
-      'Practical financial and insurance guidance for informed decisions and clearer planning.',
+      'Clear, practical guidance on insurance planning, family protection and important financial decision points.',
     ogType: 'website',
     twitterCard: 'summary',
   },
   '/recommendations': {
-    title: 'Recommendations | Anand Deshmukh',
+    title: 'Market & Product Insights | Anand Deshmukh',
     description:
-      'Recommendations and trusted guidance around financial planning, insurance and investment support from Anand Deshmukh.',
+      'Market observations and product-category guidance around insurance, mutual funds and broader financial planning with a focus on suitability and informed decision-making.',
     canonical: `${SITE_URL}/recommendations`,
-    ogTitle: 'Recommendations',
+    ogTitle: 'Market & Product Insights',
     ogDescription:
-      'A practical look at services and guidance designed around real client needs and long-term planning.',
+      'A practical, education-first perspective on market trends, product comparisons and relevant financial considerations.',
     ogType: 'website',
     twitterCard: 'summary',
   },
